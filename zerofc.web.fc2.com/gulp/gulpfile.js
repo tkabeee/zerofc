@@ -3,8 +3,10 @@
 var gulp = require("gulp");
 var webserver = require('gulp-webserver');
 var plumber   = require("gulp-plumber");
+var rename    = require('gulp-rename');
 var compass   = require("gulp-compass");
 var autoprefixer = require("gulp-autoprefixer");
+var concat    = require("gulp-concat");
 var minifyCss = require("gulp-minify-css");
 
 var APP_ROOT  = "../html";
@@ -32,15 +34,22 @@ gulp.task("compass", function(){
     ;
 });
 
-gulp.task("minify", function(){
+gulp.task("concat", function(){
   gulp.src([CSS_FILE])
-      .pipe(plumber())
-      .pipe(minifyCss({
-        'keepBreaks': false
-      }))
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(CSS_DEST_DIR))
-      ;
+    .pipe(concat("set.css"))
+    .pipe(gulp.dest(CSS_DIR))
+    ;
+});
+
+gulp.task("minify", function(){
+  gulp.src([CSS_DIR + '/set.css'])
+    .pipe(plumber())
+    .pipe(minifyCss({
+      'keepBreaks': false
+    }))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(CSS_DEST_DIR))
+    ;
 });
 
 gulp.task("watch", function(){
@@ -48,7 +57,8 @@ gulp.task("watch", function(){
     [SCSS_FILE],
     [
       "compass",
-      // "minify"
+      "concat",
+      "minify"
     ]
   );
 });
@@ -64,4 +74,10 @@ gulp.task("webserver", function(){
 gulp.task("default", function(){
   gulp.start('webserver');
   gulp.start('watch');
+});
+
+gulp.task("css", function(){
+  gulp.start('compass');
+  gulp.start('concat');
+  gulp.start('minify');
 });
