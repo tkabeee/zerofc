@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+
+/* ライトコンテンツ
+-------------------------------------*/
+
+/*
+#wrapper #container #right-content {
+	float: right;
+	width: 220px;
+	height: auto;
+}
+*/
+
+
+
+/* ------------------------------*/
+/* 掲示板 */
+/* ----------------------------- */
+
+#right-content #zero-bbs {
+	margin-bottom: 6px;
+	width: 220px;
+	height: 60px;
+	background-color: #D0D8DE;
+}
+
+#right-content #zero-bbs a {
+	display: block;
+	width: 220px;
+	height: 60px;
+	background-image: url(/img/bgimg_banner_bbs.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+#right-content #zero-bbs a:hover {
+	background-position: 0 -60px;
+}
+
+
+/* ------------------------ */
+/* インストラクター紹介 */
+/* -------------------------*/
+
+#right-content dl#instructor {
+	display: block;
+	margin-bottom: 6px;
+	width: 220px; /* 220px */
+	height: auto;
+	background-color: #CC0000;
+}
+
+dl#instructor dt {
+	display: block;
+	width: 220px;
+	height: 36px;
+	background-color: #000000;
+	border-bottom: 2px #242424 solid;
+	text-align: center;
+}
+
+dl#instructor dt span {
+	color: #FFFFFF;
+	line-height: 36px;
+}
+
+dl#instructor dd {
+	display: block;
+	width: 220px;
+	height: 80px;
+	border-bottom: 1px #AA0000 solid;
+}
+
+dl#instructor dd div.instructor-thumb {
+	float: left;
+	width: 60px;
+	height: 80px;
+}
+
+dl#instructor dd div.instructor-infor {
+	float: left;
+}
+
+dl#instructor dd div.instructor-infor p {
+	color: #FFFFFF;
+	text-align: left;
+}
+
+dl#instructor dd div.instructor-infor p.instructor-name {
+	margin-bottom: 1px;
+	padding: 2px 3px;
+	width: 154px; /* 160px -6px(padding) */
+	background-color: #FF2020;
+	text-align: left;
+}
+
+dl#instructor dd div.instructor-infor p.instructor-name span {
+	color: #FFFFFF;
+}
+
+dl#instructor dd div.instructor-infor p.instructor-contact {
+	padding: 3px;
+}
+
+
+
+/* ------------------------ */
+/* Twitterのつぶやき */
+/* -------------------------*/
+
+
+#right-content #zero-twitter {
+	width: 218px; /* 220px -2px(border) */
+	height: auto;
+	background-color: #F1F1F1;
+	border: 1px #565656 solid;
+}
+
+#zero-twitter #zero-twitter-title {
+	width: 218px;
+	height: 36px;
+	background-color: #000000;
+	background-image: url(http://img.tweetimag.es/i/zerofighterclub_m);
+	background-repeat: no-repeat;
+	background-position: 6px;
+}
+
+#zero-twitter #zero-twitter-title span {
+	padding-left: 36px;
+	color: #FFFFFF;
+	line-height: 36px;
+}
+
+#zero-twitter #twitter-feed {
+	width: 218px; /* 218px */
+	height: auto;
+}
+
+#zero-twitter #twitter-feed dl {
+	margin: 0;
+	padding: 6px 10px;
+	background-image: url(/img/bg_dotline_navy.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+#zero-twitter #twitter-feed dl dt.twitter-date {
+	font-size: 0.8em;
+	color: #777777;
+}
+
+#zero-twitter #twitter-feed dl dd a {
+	color: #000000;
+}
+
+
+
+
+
+
+
+

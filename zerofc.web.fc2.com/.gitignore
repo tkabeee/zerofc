@@ -16,6 +16,7 @@ Icon
 
 ### Linux ###
 .*
+!.gitkeep
 !.gitignore
 *~
 logs
