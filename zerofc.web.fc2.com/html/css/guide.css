@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/************/
+/* GUIDE */
+/************/
+
+#guide {
+	margin: 0;
+	padding: 0 6px;
+	width: 716px; /* 728px -12px(padding) */
+	height: auto;
+}
+
+#guide table.guide-table {
+	width: 716px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#guide table.guide-table td {
+	padding: 20px 26px;
+	text-align: left;
+	vertical-align: top;
+}
+
+#guide table.guide-table td img {
+	box-shadow: 2px 2px 1px 1px #CCCCCC;
+	-webkit-box-shadow: 2px 2px 1px 1px #CCCCCC;
+	-moz-box-shadow: 2px 2px 1px 1px #CCCCCC;
+}
+
+#guide table.guide-table td p {
+	margin-bottom: 1em;
+	padding-left: 6px;
+	border-left: 4px #EE0000 solid;
+	text-align: left;
+}
+
+#guide table.guide-table td p span {    
+	font-weight: bold;
+}

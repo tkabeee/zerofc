@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/************/
+/* SCHEDULE */
+/************/
+
+#schedule {
+	margin: 0;
+	padding: 0 6px;
+	width: 716px; /* 728px -12px(padding) */
+	height: auto;
+}
+
+table#schedule-table {
+	table-layout:fixed;
+	margin-bottom: 12px;
+	width: 100%;
+	height: auto;
+	background-color: #333333;
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+
+table#schedule-table th,
+table#schedule-table td {
+	padding: 3px 0; 
+}
+
+table#schedule-table th {
+	background-color: #EEEEEE;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+	text-align: center;
+}
+
+table#schedule-table td {
+	background-color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	border-color: transparent #EEEEEE #EEEEEE transparent;
+	text-align: center;
+}
+
+table#schedule-table th.saturday {
+  background-color: #AEE1FF;
+}
+
+table#schedule-table td.saturday {
+  background-color: #EAF7FF; 
+}
+
+table#schedule-table th.sunday {
+  background-color: #FFC1C3; 
+}
+
+table#schedule-table td.sunday {
+	background-color: #FFE6E7; 
+}
+
+.schedule-text {
+	margin-bottom: 1em;
+}
+
+.schedule-text .schedule-text-heading {
+	font-size: 1.6em;
+	font-weight: bold;
+}

@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta name="robots" content="index,follow" />
+<meta name="description" content="岡山の総合格闘技ジム、ゼロ戦クラブの練習スケジュールです。曜日毎に初心者クラスやキッズクラス、打撃クラスや柔術クラス、フリースパーリングなどを設けています。" />
+<meta name="keywords" content="岡山,倉敷,水島,格闘技,柔術,修斗,練習,スケジュール" />
+<title>練習スケジュール｜岡山総合格闘技ジム　ゼロ戦クラブ</title>
+<style type="text/css">
+<!--
+	@import url("/css/initialization.css");
+	@import url("/css/base.css");
+	@import url("/css/font.css");
+	@import url("/css/side.css");
+	@import url("/css/decoration.css");
+
+/************/
+/* SCHEDULE */
+/************/
+
+#schedule {
+	margin: 0;
+	padding: 0 6px;
+	width: 716px; /* 728px -12px(padding) */
+	height: auto;
+}
+
+table#schedule-table {
+	table-layout:fixed;
+	margin-bottom: 12px;
+	width: 100%;
+	height: auto;
+	background-color: #333333;
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+
+table#schedule-table th,
+table#schedule-table td {
+	padding: 3px 0; 
+}
+
+table#schedule-table th {
+	background-color: #EEEEEE;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+	text-align: center;
+}
+
+table#schedule-table td {
+	background-color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	border-color: transparent #EEEEEE #EEEEEE transparent;
+	text-align: center;
+}
+
+table#schedule-table th.saturday {
+  background-color: #AEE1FF; 
+}
+
+table#schedule-table td.saturday {
+  background-color: #EAF7FF; 
+}
+
+table#schedule-table th.sunday {
+  background-color: #FFC1C3; 
+}
+
+table#schedule-table td.sunday {
+  background-color: #FFE6E7; 
+}
+
+.schedule-text {
+	margin-bottom: 1em;
+}
+
+.schedule-text .schedule-text-heading {
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+-->
+</style>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery/interface/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAD9vilebooAW6yUlSQc9voBQjLjhh89rBmNpLw5H-ct4csjtpXRQB97XFwKol8v1CAdach8BIVSxRhw"></script>
+<script type="text/javascript">
+var $jq = jQuery.noConflict();
+var numEntryTwitter;
+
+$jq.getJSON("/js/config.json", function(json){
+	numEntryTwitter = json.twitter.num;
+});
+
+google.load("feeds", "1");
+function initialize() {
+	var twitter_feed = new google.feeds.Feed("http://twitter.com/statuses/user_timeline/119683015.rss");
+	twitter_feed.setNumEntries(numEntryTwitter); //エントリー数
+	twitter_feed.load(function(result) {
+        if (!result.error) {
+        	var container = $jq("#twitter-feed");
+	        var htmlstr = "";
+          for (var i = 0; i < result.feed.entries.length; i++) {
+          	var entry = result.feed.entries[i];
+						var date = dateFormat(entry.publishedDate, 2);
+						var tsubuyaki = entry.title;
+						var link = entry.link;
+						htmlstr =  '<dl>';
+						htmlstr += '<dd class="twitter-tsubuyaki"><a href="' + link + '" title="' + tsubuyaki + '" target="_blank">' + tsubuyaki.split("zerofighterclub: ").join("") + '</a></dd>';
+						htmlstr += '<dt class="twitter-date">' + date + '</dt>';
+						htmlstr += '</dl>'
+            container.append(htmlstr);
+          }
+					$jq("#twitter-loader").css("display","none");
+      	}
+    });
+
+	$jq("#gotop").click(function() {	
+		$jq("#header").ScrollTo(1000, 'easeout');
+		return false;
+	});
+}
+	
+function dateFormat(str, pattern) {
+	var myDate=new Date(str);
+	var YY = myDate.getFullYear();
+	var MM = myDate.getMonth() + 1;
+	var DD = myDate.getDate();
+	var HR = myDate.getHours();
+	var MN = myDate.getMinutes();
+	if (MM < 10) {
+		MM = "0" + MM;
+	}
+	if (DD < 10) {
+		DD = "0" + DD;
+	}
+	if (HR < 10) {
+		HR = "0" + HR;
+	}
+	if (MN < 10) {
+		MN = "0" + MN;
+	}
+	switch (pattern) {
+		case 1:
+			var date = YY + "年" + MM + "月" + DD + "日";
+			break;
+		case 2:
+			var date = MM + "/" + DD + " " + HR + ":" + MN;
+			break;
+		case 3:
+			var date = YY + "." + MM + "." + DD;
+			break;
+		default:
+			break;
+	}	
+	return date;
+}
+
+google.setOnLoadCallback(initialize);
+</script>
+</head>
+<body>
+<script type="text/javascript" src="/include/header.js"></script>
+<div id="navigation">
+ <ul class="navigation-container">
+  <li class="navi-top"><a href="/" title="TOP" target="_self"><span>TOP</span></a></li>
+  <li class="navi-information"><a href="/admission/" title="入会案内" target="_self"><span>入会案内</span></a></li>
+  <li class="navi-facility"><a href="/guide/" title="施設案内" target="_self"><span>施設案内</span></a></li>
+  <li class="navi-schedule-select"><a href="/schedule/" title="練習スケジュール" target="_self"><span>練習スケジュール</span></a></li>
+  <li class="navi-videos"><a href="/videos/" title="動画" target="_self"><span>動画</span></a></li>
+  <li class="navi-access"><a href="/access/" title="アクセスマップ" target="_self"><span>アクセスマップ</span></a></li>
+  <li class="navi-link"><a href="/link/" title="リンク" target="_self"><span>リンク</span></a></li>
+ </ul>
+</div><!-- #navigation END -->
+<div id="pankuzu">
+ <p class="pankuzu-container">&nbsp;<a href="/">TOP</a>&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;練習スケジュール</p>
+</div><!-- #pankuzu END -->
+<div id="wrapper">
+ <div id="container" class="clearfix">
+  <div id="main-content">
+  
+   <h3>練習スケジュール</h3>
+   <div id="schedule">
+   
+    <table id="schedule-table" cellspacing="0">
+     <tr>
+      <th>&nbsp;</th>
+      <th>月曜日</th>
+      <th>火曜日</th>
+      <th>水曜日</th>
+      <th>木曜日</th>
+      <th>金曜日</th>
+      <th class="saturday">土曜日</th>
+      <th class="sunday">日曜日</th>
+     </tr>
+     <tr>
+      <th rowspan="2">9:00</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <!--<th>9:00</th>-->
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <th rowspan="2">10:00</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <!--<th>10:00</th>-->
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <th rowspan="2">11:00</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <!--<th>11:00</th>-->
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>朝柔術クラス</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <th rowspan="2">12:00</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>朝柔術クラス</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <!--<th>12:00</th>-->
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>朝柔術クラス</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <th>13:00<br />～<br />17:00</th>
+      <td colspan="5">&nbsp;</td>
+      <!--<td>&nbsp;</td>-->
+      <!--<td>&nbsp;</td>-->
+      <!--<td>&nbsp;</td>-->
+      <!--<td>&nbsp;</td>-->
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <th rowspan="2">18:00</th>
+      <td>キッズクラス</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">ベーシックMMA</td>
+      <td class="sunday">フィットネス<BR>
+    クラス</td>
+     </tr>
+     <tr>
+      <!--<th>18:00</th>-->
+      <td>キッズクラス</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">ベーシックMMA</td>
+      <td class="sunday">フィットネス<BR>
+    クラス</td>
+     </tr>
+     <tr>
+      <th rowspan="2">19:00</th>
+      <td>キッズクラス</td>
+      <td>ﾍﾞｰｼｯｸ打撃</td>
+      <td>&nbsp;</td>
+      <td>打撃クラス</td>
+      <td>ビギナーMMA</td>
+      <td class="saturday">ベーシックMMA</td>
+      <td class="sunday">フィットネス<BR>
+    クラス</td>
+     </tr>
+     <tr>
+      <!--<th>19:00</th>-->
+      <td>&nbsp;</td>
+      <td>ﾍﾞｰｼｯｸ打撃</td>
+      <td>&nbsp;</td>
+      <td>打撃クラス</td>
+      <td>ビギナーMMA</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">柔術クラス</td>
+     </tr>
+     <tr>
+      <th rowspan="2">20:00</th>
+      <td>&nbsp;</td>
+      <td>ﾍﾞｰｼｯｸ打撃</td>
+      <td>&nbsp;</td>
+      <td>打撃クラス</td>
+      <td>ビギナーMMA</td>
+      <td class="saturday">柔術クラス</td>
+      <td class="sunday">柔術クラス</td>
+     </tr>
+     <tr>
+      <!--<th>20:00</th>-->
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">柔術クラス</td>
+      <td class="sunday">柔術クラス</td>
+     </tr>
+     <tr>
+      <th rowspan="2">21:00</th>
+      <td>ｸﾞﾗｯﾌﾟﾘﾝｸﾞｸﾗｽ</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">柔術クラス</td>
+      <td class="sunday">柔術クラス</td>
+     </tr>
+     <tr>
+      <!--<th>21:00</th>-->
+      <td>ｸﾞﾗｯﾌﾟﾘﾝｸﾞｸﾗｽ</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+     <tr>
+      <th>22:00<br />～<br />24:00</th>
+      <td colspan="5">&nbsp;</td>
+      <!--<td>&nbsp;</td>-->
+      <!--<td>&nbsp;</td>-->
+      <!--<td>&nbsp;</td>-->
+      <!--<td>&nbsp;</td>-->
+      <td class="saturday">&nbsp;</td>
+      <td class="sunday">&nbsp;</td>
+     </tr>
+    </table>
+
+<p class="schedule-text">
+月曜日～金曜日の19：00から21：00まで打撃スパーそれ以降はグラップリング＆MMAスパーです。<br />
+スパー内でも希望があれば教えます
+</p>
+
+<p class="schedule-text">
+土日は、スケジュールクラスの内容になります<br />
+ジムの開放を始めます。<br />
+ジムを使いたい方はメールで連絡して下さい<br />
+使用できるようにしますが、練習が終わったら掃除は必ずして下さい<br />
+なるべく２人以上で使用してください
+</p>
+
+<p class="schedule-text">
+<span class="schedule-text-heading">初心者クラスの内容</span><br />
+基本的な格闘技の動きやテクニックをおこないます。<br />
+スパーリングは自由参加です。<br />
+初歩的な体の使い方から親切丁寧に教えますので格闘技初心者の方、<br />
+運動が苦手な方もぜひ来て下さい。運動不足解消やストレス発散に。<br />
+</p>
+
+<p class="schedule-text">
+<span class="schedule-text-heading">選手クラスは、</span><br />
+試合に出ることを目的としたクラスです　<br />
+フリースパー中心となります。
+</p>
+
+<p class="schedule-text">
+<span class="schedule-text-heading">キッズクラスは、</span><br />
+小学生以上です。<br />
+</p>
+
+<p class="schedule-text">
+試合・セミナー・合同練習等の開催日は練習をお休みすることがあります。<br />
+下記の告知やブログに情報が掲載されるので、チェックしておいて下さい。 
+</p>
+
+<p class="schedule-text">
+毎週火・金曜日の19時～で水島中学校柔道場にて ゼロ戦クラブ水島支部が移転いたしました。
+</p>
+
+<p>見学・体験等の申し込みや、詳細についてのお問い合わせ等は、メールか電話でご連絡ください。</p>
+<p>ゼロ戦クラブ　086-244-6806&nbsp;</p>
+<p>つながらない場合は、090-8364-8271&nbsp;影山(カゲヤマ)代表まで</p>
+</div>
+
+  </div><!-- #main-content END -->
+
+  <div id="right-content">
+   <script src="/include/zerobbs.js"></script>
+   <!--<script src="/include/instructor.js"></script>-->
+
+   <div id="zero-twitter">
+    <div id="zero-twitter-title"><span><strong>zerofighterclubのつぶやき</strong></span></div>
+    <div id="twitter-feed">
+     <div id="twitter-loader" style="padding:60px 0; text-align:center"><img src="/img/loader_squares.gif" width="43" height="11" alt="loading..." /></div>
+    </div>
+    <p style="padding:4px 6px; text-align:center;">
+      <a style="line-height:60px;" href="http://twitter.com/zerofighterclub" title="『ゼロ戦クラブのTwitter』岡山総合格闘技団体ゼロ戦クラブでございます　コツコツやってます" target="_blank"><img src="/img/banner_twitter.gif" width="200" height="60" align="つぶやきをもっと見る" border="0" /></a>
+    </p>
+   </div><!-- #zero-twitter END -->
+
+  </div><!-- right-content END -->
+
+ </div><!-- #container END -->
+</div><!-- #wrapper END -->
+<script src="/include/footer.js"></script>
+<script src="/include/gAnalytics.js"></script>
+</body>
+</html>

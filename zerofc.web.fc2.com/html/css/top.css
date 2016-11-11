@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+
+/* メインコンテンツ
+-------------------------------------*/
+
+/*
+#wrapper #container #main-content {
+	float: left;
+	width: 728px;
+	height: 500px;
+	border-right: 1px #E8E8E8 solid;
+}
+*/
+
+
+
+/* ------------------------ */
+/* ピックアップ */
+/* -------------------------*/
+
+#main-content #pickup {
+	margin-bottom: 0;
+	width: 728px;
+	height: 180px;
+	background-color: #000000;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+
+/* ------------------------ */
+/* コンテンツ紹介 */
+/* -------------------------*/
+
+#main-content ul#contents-introduction {
+	display: block;
+	margin-bottom: 6px;
+	padding: 6px 18px;
+	width: 692px; /* 728px -36px(padding) */
+	height: auto;
+	background-color: #DDDDDD;
+}
+
+ul#contents-introduction li {
+	display: inline;
+	float: left;
+}
+
+ul#contents-introduction li a {
+	display: block;
+	width: 222px; /* 224px -2px(border) */
+	height: 70px;
+	border: 1px #000000 solid;
+}
+
+/* ------------------------ */
+/* 会員さんからの一言 */
+/* -------------------------*/
+
+#main-content #members-voice {
+	display: block;
+	margin-bottom: 6px;
+	width: 728px;
+	height: auto;
+	background-color: #FFD2D2;
+}
+
+#members-voice .members-voice-top {
+	width: 728px;
+	height: 14px;
+	background-color: #FFD2D2;
+	background-image: url(/img/bgimg_voice_top.gif);
+	background-repeat: no-repeat;
+}
+
+#members-voice .members-voice-name {
+	width: 728px;
+	height: auto;
+	background-color: #FFD2D2;
+}
+
+#members-voice .members-voice-name p {
+	padding-left: 14px;
+	padding-bottom: 4px;
+}
+
+#members-voice .members-voice-main {
+	position: relative;
+	width: 728px;
+	height: 72px;
+	background-color: #FFD2D2;
+	background-image: url(/img/bgimg_voice_main.gif);
+	background-repeat: no-repeat;
+}
+
+#members-voice .members-voice-main #members-voice-thumb {
+	position: absolute;
+	top: 0;
+	left: 14px;
+	width: 72px;
+	height: 72px;
+}
+
+#members-voice .members-voice-main #members-voice-shout {
+	position: absolute;
+	top: 0;
+	left: 105px;
+	overflow: hidden;
+	padding: 10px;
+	width: 590px; /* 610px -20px(padding) */
+	height: 50px; /* 70px -20px(padding) */
+}
+
+#members-voice .members-voice-bottom {
+	width: 728px;
+	height: 14px;
+	background-color: #FFD2D2;
+	background-image: url(/img/bgimg_voice_bottom.gif);
+	background-repeat: no-repeat;
+}
+
+
+/* ------------------------ */
+/* 零日記 最新情報 */
+/* -------------------------*/
+
+#main-content #infor-zeronikki {
+	margin-bottom: 12px;
+	width: 728px;
+	height: auto;
+	background-color: #555555;
+}
+
+#main-content #infor-zeronikki #zeronikki-head {
+	width: 728px;
+	height: 36px;
+	background-color: #555555;
+	background-image: url(/img/bgimg_infor_zeronikki_hf_wide.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+#main-content #infor-zeronikki #zeronikki-body {
+	width: 728px;
+	height: auto;
+	background-color: #555555;
+	background-image: url(/img/bgimg_infor_zeronikki_body.gif);
+	background-repeat: repeat-y;
+}
+
+#main-content #infor-zeronikki #zeronikki-foot {
+	width: 728px;
+	height: 11px;
+	background-color: #555555;
+	background-image: url(/img/bgimg_infor_zeronikki_hf_wide.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+
+/*** #zeronikki-head ***/
+
+#zeronikki-head .zeronikki-title {
+	padding-left: 32px;
+	background-image: url(/img/bgimg_infor_nikki_title.gif);
+	background-position: 4px 1px;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	line-height: 30px;
+}
+
+#zeronikki-head .zeronikki-more a {
+	padding-right: 10px;
+	color: #FFFFFF;
+	line-height: 30px;
+}
+
+/*** #zeronikki-body ***/
+
+#zeronikki-body #nikki-feed {
+	margin: 0 5px;
+	padding: 0;
+	width: 718px; /* 728px -10px(margin) */
+	height: auto;
+	background-color: #FFFFFF;
+}
+
+#zeronikki-body #nikki-feed dl,
+#zeronikki-body #nikki-feed dl dt,
+#zeronikki-body #nikki-feed dl dd {
+	display: block;
+}
+
+#zeronikki-body #nikki-feed dl dt.nikki-date,
+#zeronikki-body #nikki-feed dl dd.nikki-title,
+#zeronikki-body #nikki-feed dl dd.nikki-content {
+	padding: 0 16px;
+}
+
+/* 記事表示部分/コメントなどを囲うブロック要素の属性 */
+#zeronikki-body #nikki-feed dl dd.nikki-content {
+	line-height: 1.4;
+}
+
+/* 記事内の画像（デフォルトでは左よせ）*/
+#zeronikki-body #nikki-feed dl dd.nikki-content a img {
+	border: 1px solid #999;
+	margin: 3px;
+}
+
+#zeronikki-body #nikki-feed dl dd.nikki-content blockquote {
+	width: 90%;
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	padding: 0;
+	margin: 10px 0 0 20px;
+}
+
+#zeronikki-body #nikki-feed dl dd.nikki-content blockquote p {
+	padding: 8px 20px;
+	margin: 0;
+}
+
+#zeronikki-body #nikki-feed dl dd.nikki-content ol,
+#zeronikki-body #nikki-feed dl dd.nikki-content ul {
+	margin: 0;
+	padding: 0 0 0 25px;
+}
+
+#zeronikki-body #nikki-feed dl dd.nikki-content ol li {
+	margin-left: 18px;
+}
+
+#zeronikki-body #nikki-feed dl dd.nikki-content ul li {
+	margin-left: 0;
+	list-style-type: none;
+}
+
+#zeronikki-body ul#nikki-news {
+	display: block;
+	margin: 0 5px;
+	padding: 0;
+	width: 718px; /* 728px -10px(margin) */
+	height: auto;
+	background-color: #FFFFFF;
+}
+
+#zeronikki-body ul#nikki-news li {
+	display: block;
+	margin: 0 12px;
+	padding: 6px 0;
+	width: 694px; /* 718px -24px(margin) */
+	background-image: url(/img/bg_dotline_navy.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+
+
+
+

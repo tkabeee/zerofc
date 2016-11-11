@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<META http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta name="robots" content="index,follow" />
+<meta name="description" content="打撃・グラップリング・柔術・レスリング・キックボクシングなど各自の希望に合わせた練習を行っています。初心者や未経験の方でも楽しく練習ができる格闘技ジムです。修斗協会公認チームとして岡山・倉敷・水島・総社で活動中。岡山在住のプロ総合格闘家が教えます！" />
+<meta name="keywords" content="岡山,倉敷,水島,格闘技,総合格闘技,柔術,レスリング,修斗,キック,ボクシング,空手" />
+<meta name="google-site-verification" content="VY6apQgrtzLTC_yR2i9QmKyTyc4xV9Injys1efZocMU" />
+<title>岡山総合格闘技ジム　ゼロ戦クラブ（修斗/ブラジリアン柔術/グラップリング/レスリング/キックボクシング/グローブ空手）【岡山/倉敷/水島/総社】</title>
+<style type="text/css">
+<!--
+@import url("/css/initialization.css");
+@import url("/css/base.css");
+@import url("/css/font.css");
+@import url("/css/side.css");
+@import url("/css/top.css");
+
+iframe {  
+	width: 728px;
+	height: 300px;
+}
+-->
+</style>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery/interface/scrolltopcontrol.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAD9vilebooAW6yUlSQc9voBQjLjhh89rBmNpLw5H-ct4csjtpXRQB97XFwKol8v1CAdach8BIVSxRhw"></script>
+<script type="text/javascript">
+var $jq = jQuery.noConflict();
+var numEntryNikki;
+var numEntryTwitter;
+
+$jq.getJSON("/js/config.json", function(json){
+	numEntryNikki = json.blog.num;
+	numEntryTwitter = json.twitter.num;
+});
+
+google.load("feeds", "1");
+function initialize() {
+    //iframeの高さ自動調整
+    $jq('iframe').load(function(){
+        if (this.contentWindow.document.documentElement.scrollHeight == 300) {
+            var h = 0;
+            // IE
+            if( document.all ) {
+                h = document.frames('blockrandom').document.body.scrollHeight;
+                document.all.blockrandom.style.height = h + 20 + 'px';
+            }
+            // Misc
+            else {
+                h = document.getElementById('blockrandom').contentDocument.height;
+                document.getElementById('blockrandom').style.height = h + 60 + 'px';
+            }
+        } else {
+            $jq(this).height(this.contentWindow.document.documentElement.scrollHeight);  
+        }
+
+    });
+    $jq('iframe').triggerHandler('load');
+	
+	var nikki_feed = new google.feeds.Feed("http://feeds.fc2.com/fc2/xml?host=zfcj.blog98");
+	nikki_feed.setNumEntries(numEntryNikki); //エントリー数
+	nikki_feed.load(function(result) {
+        if (!result.error) {
+          	var container = $jq("#nikki-feed");
+          	var newsContainer = $jq("#nikki-news");
+			var newsStr = "";
+          	for (var i=0; i<result.feed.entries.length; i++) {
+            	var entry = result.feed.entries[i];
+				var date = dateFormat(entry.publishedDate, 3);
+				var category = entry.categories[0];
+				var title = entry.title;
+				var link = entry.link;
+				newsStr = '<li>';
+				newsStr += '<span style="color:#666666;">' + date + '</span>&nbsp;&nbsp;';
+				newsStr += '<a href="' + link + '" title="' + title + '" target="_blank">[' + category + '] ' + title + '</a>';
+				newsStr += '</li>';
+				newsContainer.append(newsStr);
+          	}
+			$jq("#nikki-loader").css("display","none");
+        }
+    });
+
+	var twitter_feed = new google.feeds.Feed("http://twitter.com/statuses/user_timeline/119683015.rss");
+	twitter_feed.setNumEntries(numEntryTwitter); //エントリー数
+	twitter_feed.load(function(result) {
+        if (!result.error) {
+          	var container = $jq("#twitter-feed");
+			var htmlstr = "";
+          	for (var i = 0; i < result.feed.entries.length; i++) {
+            	var entry = result.feed.entries[i];
+				var date = dateFormat(entry.publishedDate, 2);
+				var tsubuyaki = entry.title;
+				var link = entry.link;
+				htmlstr =  '<dl>';
+				htmlstr += '<dd class="twitter-tsubuyaki"><a href="' + link + '" title="' + tsubuyaki + '" target="_blank">' + tsubuyaki.split("zerofighterclub: ").join("") + '</a></dd>';
+				htmlstr += '<dt class="twitter-date">' + date + '</dt>';
+				htmlstr += '</dl>'
+            	container.append(htmlstr);
+          	}
+			$jq("#twitter-loader").css("display","none");
+        }
+    });
+
+	$jq("#gotop").click(function() {	
+		$jq("#header").ScrollTo(1000, 'easeout');
+		return false;
+	});
+}
+
+/*
+function textFormat(str) {
+	if (str.length > 56) {
+		var text = str.substr(0, 56);
+		text += "...";
+	} else {
+		var text = str;
+	}
+	return text
+}
+*/
+	
+function dateFormat(str, pattern) {
+	var myDate=new Date(str);
+	var YY = myDate.getFullYear();
+	var MM = myDate.getMonth() + 1;
+	var DD = myDate.getDate();
+	var HR = myDate.getHours();
+	var MN = myDate.getMinutes();
+	if (MM < 10) {
+		MM = "0" + MM;
+	}
+	if (DD < 10) {
+		DD = "0" + DD;
+	}
+	if (HR < 10) {
+		HR = "0" + HR;
+	}
+	if (MN < 10) {
+		MN = "0" + MN;
+	}
+	switch (pattern) {
+		case 1:
+			var date = YY + "年" + MM + "月" + DD + "日";
+			break;
+		case 2:
+			var date = MM + "/" + DD + " " + HR + ":" + MN;
+			break;
+		case 3:
+			var date = YY + "." + MM + "." + DD;
+			break;
+		default:
+			break;
+	}	
+	return date;
+}
+
+google.setOnLoadCallback(initialize);
+</script>
+</head>
+<body>
+<script type="text/javascript" src="/include/header.js"></script>
+<div id="navigation">
+ <ul class="navigation-container">
+  <li class="navi-top-select"><a href="/" title="TOP" target="_self"><span>TOP</span></a></li>
+  <li class="navi-information"><a href="/admission/" title="入会案内" target="_self"><span>入会案内</span></a></li>
+  <li class="navi-facility"><a href="/guide/" title="施設案内" target="_self"><span>施設案内</span></a></li>
+  <li class="navi-schedule"><a href="/schedule/" title="練習スケジュール" target="_self"><span>練習スケジュール</span></a></li>
+  <li class="navi-videos"><a href="http://www.youtube.com/user/zerofighterclub?feature=mhee" title="動画" target="_blank"><span>動画</span></a></li>
+  <li class="navi-access"><a href="/access/" title="アクセスマップ" target="_self"><span>アクセスマップ</span></a></li>
+  <li class="navi-kids"><a href="/access/" title="いじめ対策" target="_self">いじめ対策<span></span></a></li>
+  <li class="navi-link"><a href="/link/" title="リンク" target="_self"><span>リンク</span></a></li>
+ </ul>
+</div><!-- #navigation END -->
+<div id="pankuzu">
+ <p class="pankuzu-container">&nbsp;<a href="/">TOP</a></p>
+</div><!-- #pankuzu END -->
+<div id="wrapper">
+ <div id="container" class="clearfix">
+  <div id="main-content">
+
+   <div id="pickup" style="margin-bottom:12px;">
+    <script language="javascript" type="text/javascript">
+	$("pickup").style.backgroundImage = "url(/img/pickup/bgimg_pickup_02.jpg)";
+	</script>
+    <div style="padding:86px 6px 6px 266px;">
+     <p style="padding:12px;"><span style="color:#FFFFFF;">打撃・グラップリング・柔術・レスリング・キックボクシングなど各自の希望に合わせた練習を行っています。初心者や未経験の方でも楽しく練習ができる格闘技ジムです。日本修斗協会公認オフィシャルジム日本柔術アカデミーとして岡山・倉敷・水島・総社で活動中です。</span></p>
+    </div>
+   </div>
+
+   <div id="infor-zeronikki">
+    <div id="zeronikki-head" class="clearfix">
+     <span class="zeronikki-title" style="float:left;"><strong>零日記の最新記事</strong></span>
+     <span class="zeronikki-more" style="float:right"><a href="http://zfcj.blog98.fc2.com/" title="『零日記』岡山のゼロ戦クラブの日常をつづっているブログ" target="_blank">&gt;&gt;零日記をもっと見る</a></span>
+    </div>
+    <div id="zeronikki-body">
+     <div id="nikki-feed"><div id="nikki-loader" style="padding:60px 0; text-align:center"><img src="/img/loader_circle_ball.gif" width="54" height="55" alt="loading..." /></div></div>
+     <ul id="nikki-news"></ul>
+    </div>
+    <div id="zeronikki-foot"></div>
+   </div><!-- #infor-zeronikki -->
+
+   <iframe id="blockrandom" name="iframe" src="/main/top2.html" scrolling="no" frameborder="0">この部分はインラインフレームを使用しています。</iframe>
+
+  </div><!-- #main-content END -->
+
+  <div id="right-content">
+   <script src="/include/zerobbs.js" type="text/javascript"></script>
+   <!--<script src="/include/instructor.js"></script>-->
+
+   <div id="zero-twitter">
+    <div id="zero-twitter-title"><span><strong>zerofighterclubのつぶやき</strong></span></div>
+    <div id="twitter-feed">
+     <div id="twitter-loader" style="padding:60px 0; text-align:center"><img src="/img/loader_squares.gif" width="43" height="11" alt="loading..." /></div>
+    </div>
+    <p style="padding:4px 6px; text-align:center;">
+      <a style="line-height:60px;" href="http://twitter.com/zerofighterclub" title="『ゼロ戦クラブのTwitter』岡山総合格闘技団体ゼロ戦クラブでございます　コツコツやってます" target="_blank"><img src="/img/banner_twitter.gif" width="200" height="60" alt="つぶやきをもっと見る" border="0" /></a>
+    </p>
+   </div><!-- #zero-twitter END -->
+
+  </div><!-- right-content END -->
+
+ </div><!-- #container END -->
+</div><!-- #wrapper END -->
+<script src="/include/footer.js" type="text/javascript"></script>
+<script src="/include/gAnalytics.js" type="text/javascript"></script>
+</body>
+</html>
