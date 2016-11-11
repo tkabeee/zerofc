@@ -83,7 +83,7 @@ body {
 	width: 100%;
 	height: auto;
 	background-color: #FFFFFF;
-	background-image: url(/img/bgimg_wrapper.gif);
+	/*background-image: url(/img/bgimg_wrapper.gif);*/
 	background-repeat: repeat-y;
 	background-position: center;
 }
