@@ -1,5 +1,5 @@
 (function(window,$,undefined){
-  $("#gotop").click(function() {  
+  $("#gotop").click(function() {
     $("#header").ScrollTo(1000, 'easeout');
     return false;
   });
