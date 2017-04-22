@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+#instructor {
+  margin: 0;
+  padding: 0 6px;
+  width: 716px; /* 728px -12px(padding) */
+  height: auto;
+}
+
+.instructor-table {
+  width: 716px;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .picture {
+    width: 184px;
+
+    img {
+      padding: 1px;
+      border: 1px solid #989898;
+    }
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  .infor {
+  }
+
+  .name {
+    font-size: 1.6em;
+
+    span {
+      padding-left: 1em;
+      color: #BBBBBB;
+      font-size: 0.8em;
+    }
+  }
+
+  .class {
+    padding-bottom: 3px;
+    border-bottom: 1px dotted #989898;
+  }
+
+  .introduction {
+  }
+
+}
