@@ -3,8 +3,7 @@
 #admission {
   margin: 0;
   padding: 0 6px;
-  width: 716px;
-  /* 728px -12px(padding) */
+  width: 716px; /* 728px -12px(padding) */
   height: auto;
 }
 
@@ -13,18 +12,18 @@ table.fee-table {
   border-collapse: separate;
   border-spacing: 3px;
   border: 1px #000000 solid;
-}
 
-table.fee-table td {
-  padding: 6px 10px;
-  border: 1px #000000 solid;
+  td {
+    padding: 6px 10px;
+    border: 1px #000000 solid;
+  }
 }
 
 .admission-text {
   margin-bottom: 1em;
-}
 
-.admission-text .admission-text-heading {
-  font-size: 1.6em;
-  font-weight: bold;
+  .admission-text-heading {
+    font-size: 1.6em;
+    font-weight: bold;
+  }
 }

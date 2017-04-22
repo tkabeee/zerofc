@@ -1,22 +1,16 @@
-@charset "utf-8";
-
-/************/
-/* KIDS */
-/************/
+@charset "UTF-8";
 
 #kids {
-	margin: 0;
-	padding: 0 6px;
-	width: 716px; /* 728px -12px(padding) */
-	height: auto;
+  margin: 0;
+  padding: 0 6px;
+  width: 716px;
+  /* 728px -12px(padding) */
+  height: auto;
   font-size: 1.2em;
 }
 
 #kids p {
   margin-bottom: 1em;
-}
-
-#kids ul {
 }
 
 #kids ul li {

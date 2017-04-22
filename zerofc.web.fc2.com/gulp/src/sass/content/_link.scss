@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+#link {
+  padding: 0 6px;
+
+  dl {
+    display: block;
+    margin-bottom: 1em;
+
+    dt {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    dd {
+      table {
+        border-collapse: separate;
+        border-spacing: 4px;
+
+        th,
+        td {
+          vertical-align: top;
+          text-align: left;
+        }
+
+        td {
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+}

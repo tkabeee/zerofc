@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#access {
+  padding: 0 6px;
+  width: 716px; /* 728px -12px(padding) */
+}
+
+#mapst {
+  float: none;
+  margin-bottom: 6px;
+  width: 714px; /* 716px -2px(border) */
+  height: 498px; /* 500px -2px(border) */
+  border: 1px #565656 solid;
+}
+
+#gym-infor {
+  float: left;
+  width: 448px;
+  height: auto;
+
+  table {
+    margin-bottom: 6px;
+    background-color: #CCCCCC;
+    border-collapse: separate;
+    border-spacing: 1px;
+
+    th {
+      padding: 12px;
+      width: 100px;
+      background-color: #FFD2D2;
+      /*background-color: #E6E6E6;*/
+      font-weight: bold;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    td {
+      padding: 12px;
+      background-color: #FFFFFF;
+      text-align: left;
+      vertical-align: top;
+    }
+  }
+}
+
+#panoramast {
+  float: right;
+  width: 260px;
+  height: 260px;
+  border-color: black;
+}

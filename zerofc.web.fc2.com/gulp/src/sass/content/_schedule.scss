@@ -3,13 +3,12 @@
 #schedule {
   margin: 0;
   padding: 0 6px;
-  width: 716px;
-  /* 728px -12px(padding) */
+  width: 716px; /* 728px -12px(padding) */
   height: auto;
 }
 
 table#schedule-table {
-  table-layout: fixed;
+  table-layout:fixed;
   margin-bottom: 12px;
   width: 100%;
   height: auto;
