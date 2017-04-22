@@ -64,12 +64,12 @@ function initialize() {
         }
     });
 
-	$jq("#gotop").click(function() {	
+	$jq("#gotop").click(function() {
 		$jq("#header").ScrollTo(1000, 'easeout');
 		return false;
 	});
 }
-	
+
 function dateFormat(str, pattern) {
 	var myDate=new Date(str);
 	var YY = myDate.getFullYear();
@@ -101,7 +101,7 @@ function dateFormat(str, pattern) {
 			break;
 		default:
 			break;
-	}	
+	}
 	return date;
 }
 
@@ -109,6 +109,7 @@ google.setOnLoadCallback(initialize);
 </script>
 </head>
 <body>
+<script src="/include/fb_sdk.js"></script>
 <script type="text/javascript" src="/include/header.js"></script>
 <div id="navigation">
  <ul class="navigation-container">
@@ -127,7 +128,7 @@ google.setOnLoadCallback(initialize);
 <div id="wrapper">
  <div id="container" class="clearfix">
   <div id="main-content">
-  
+
    <h3>所属選手の紹介</h3>
    <div id="fighter">
     <h4 style="padding:30px; font-size:14px; text-align:center;">＜只今準備中です。＞</h4>
@@ -136,19 +137,8 @@ google.setOnLoadCallback(initialize);
   </div><!-- #main-content END -->
 
   <div id="right-content">
-   <script src="/include/zerobbs.js"></script>   
-   <!--<script src="/include/instructor.js"></script>-->
-
-   <div id="zero-twitter">
-    <div id="zero-twitter-title"><span><strong>zerofighterclubのつぶやき</strong></span></div>
-    <div id="twitter-feed">
-     <div id="twitter-loader" style="padding:60px 0; text-align:center"><img src="/img/loader_squares.gif" width="43" height="11" alt="loading..." /></div>
-    </div>
-    <p style="padding:4px 6px; text-align:center;">
-      <a style="line-height:60px;" href="http://twitter.com/zerofighterclub" title="『ゼロ戦クラブのTwitter』岡山総合格闘技団体ゼロ戦クラブでございます　コツコツやってます" target="_blank"><img src="/img/banner_twitter.gif" width="200" height="60" align="つぶやきをもっと見る" border="0" /></a>
-    </p>
-   </div><!-- #zero-twitter END -->
-
+    <script src="/include/instructor.js"></script>
+    <script src="/include/fb_page.js"></script>
   </div><!-- right-content END -->
 
  </div><!-- #container END -->

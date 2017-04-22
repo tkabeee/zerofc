@@ -23,26 +23,26 @@
 /* SCHEDULE */
 /************/
 
-#schedule {  
-    
-    
-    
-    
-    
-    
+#schedule {
+
+
+
+
+
+
 	margin: 0;
 	padding: 0 6px;
 	width: 716px; /* 728px -12px(padding) */
 	height: auto;
 }
 
-table#schedule-table {  
-    
-    
-    
-    
-    
-    
+table#schedule-table {
+
+
+
+
+
+
 	table-layout:fixed;
 	margin-bottom: 12px;
 	width: 100%;
@@ -53,23 +53,23 @@ table#schedule-table {
 }
 
 table#schedule-table th,
-table#schedule-table td {  
-    
-    
-    
-    
-    
-    
-	padding: 3px 0; 
+table#schedule-table td {
+
+
+
+
+
+
+	padding: 3px 0;
 }
 
-table#schedule-table th {  
-    
-    
-    
-    
-    
-    
+table#schedule-table th {
+
+
+
+
+
+
 	background-color: #EEEEEE;
 	border-width: 1px;
 	border-style: solid;
@@ -77,13 +77,13 @@ table#schedule-table th {
 	text-align: center;
 }
 
-table#schedule-table td {  
-    
-    
-    
-    
-    
-    
+table#schedule-table td {
+
+
+
+
+
+
 	background-color: #FFFFFF;
 	border-width: 1px;
 	border-style: solid;
@@ -91,63 +91,63 @@ table#schedule-table td {
 	text-align: center;
 }
 
-table#schedule-table th.saturday {  
-    
-    
-    
-    
-    
-    
-  background-color: #AEE1FF; 
+table#schedule-table th.saturday {
+
+
+
+
+
+
+  background-color: #AEE1FF;
 }
 
-table#schedule-table td.saturday {  
-    
-    
-    
-    
-    
-    
-  background-color: #EAF7FF; 
+table#schedule-table td.saturday {
+
+
+
+
+
+
+  background-color: #EAF7FF;
 }
 
-table#schedule-table th.sunday {  
-    
-    
-    
-    
-    
-    
-  background-color: #FFC1C3; 
+table#schedule-table th.sunday {
+
+
+
+
+
+
+  background-color: #FFC1C3;
 }
 
-table#schedule-table td.sunday {  
-    
-    
-    
-    
-    
-    
-  background-color: #FFE6E7; 
+table#schedule-table td.sunday {
+
+
+
+
+
+
+  background-color: #FFE6E7;
 }
 
-.schedule-text {  
-    
-    
-    
-    
-    
-    
+.schedule-text {
+
+
+
+
+
+
 	margin-bottom: 1em;
 }
 
-.schedule-text .schedule-text-heading {  
-    
-    
-    
-    
-    
-    
+.schedule-text .schedule-text-heading {
+
+
+
+
+
+
 	font-size: 1.6em;
 	font-weight: bold;
 }
@@ -189,12 +189,12 @@ function initialize() {
       	}
     });
 
-	$jq("#gotop").click(function() {	
+	$jq("#gotop").click(function() {
 		$jq("#header").ScrollTo(1000, 'easeout');
 		return false;
 	});
 }
-	
+
 function dateFormat(str, pattern) {
 	var myDate=new Date(str);
 	var YY = myDate.getFullYear();
@@ -226,7 +226,7 @@ function dateFormat(str, pattern) {
 			break;
 		default:
 			break;
-	}	
+	}
 	return date;
 }
 
@@ -234,7 +234,8 @@ google.setOnLoadCallback(initialize);
 </script>
 </head>
 <body>
-<script type="text/javascript" src="/include/header.js"></script>
+<script src="/include/fb_sdk.js"></script>
+<script src="/include/header.js"></script>
 <div id="navigation">
  <ul class="navigation-container">
   <li class="navi-top"><a href="/" title="TOP" target="_self"><span>TOP</span></a></li>
@@ -253,10 +254,10 @@ google.setOnLoadCallback(initialize);
 <div id="wrapper">
  <div id="container" class="clearfix">
   <div id="main-content">
-  
+
    <h3>練習スケジュール</h3>
    <div id="schedule">
-   
+
     <table id="schedule-table" cellspacing="0">
      <tr>
       <th>&nbsp;</th>
@@ -673,7 +674,7 @@ google.setOnLoadCallback(initialize);
 ダイエットにも有効です　ストレス発散にパンチ　キックを打ち込んでみませんか！
 <p class="schedule-text">
 試合・セミナー・合同練習等の開催日は練習やクラスをお休みすることがあります。<br />
-下記の告知やブログに情報が掲載されるので、チェックしておいて下さい。 
+下記の告知やブログに情報が掲載されるので、チェックしておいて下さい。
 </p>
 
 <p class="schedule-text">
@@ -688,19 +689,8 @@ google.setOnLoadCallback(initialize);
   </div><!-- #main-content END -->
 
   <div id="right-content">
-   <script src="/include/zerobbs.js"></script>
-   <!--<script src="/include/instructor.js"></script>-->
-
-   <div id="zero-twitter">
-    <div id="zero-twitter-title"><span><strong>zerofighterclubのつぶやき</strong></span></div>
-    <div id="twitter-feed">
-     <div id="twitter-loader" style="padding:60px 0; text-align:center"><img src="/img/loader_squares.gif" width="43" height="11" alt="loading..." /></div>
-    </div>
-    <p style="padding:4px 6px; text-align:center;">
-      <a style="line-height:60px;" href="http://twitter.com/zerofighterclub" title="『ゼロ戦クラブのTwitter』岡山総合格闘技団体ゼロ戦クラブでございます　コツコツやってます" target="_blank"><img src="/img/banner_twitter.gif" width="200" height="60" align="つぶやきをもっと見る" border="0" /></a>
-    </p>
-   </div><!-- #zero-twitter END -->
-
+    <script src="/include/instructor.js"></script>
+    <script src="/include/fb_page.js"></script>
   </div><!-- right-content END -->
 
  </div><!-- #container END -->
