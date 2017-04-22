@@ -10,7 +10,7 @@
 
   function initialize() {
     //iframeの高さ自動調整
-    $('iframe').load(function(){
+    $('iframe').on('load', function(){
       if (this.contentWindow.document.documentElement.scrollHeight == 300) {
         var h = 0;
         // IE
