@@ -12,6 +12,8 @@ $experimental-support-for-microsoft: true;
 @import "layout";
 @import "decoration";
 
+@import "content/top";
+@import "content/zeronikki";
 @import "content/admission";
 @import "content/guide";
 @import "content/schedule";

@@ -130,13 +130,13 @@ strong {
 
 #main-content {
   float: left;
-  width: 728px;
+  width: 688px;
   height: auto;
 }
 
 #right-content {
   float: right;
-  width: 220px;
+  width: 260px;
   height: auto;
 }
 
@@ -602,11 +602,178 @@ h3 {
   letter-spacing: 1px;
 }
 
+/* ------------------------ */
+/* ピックアップ */
+/* -------------------------*/
+#pickup {
+  margin-bottom: 0;
+  width: 688px;
+  height: 180px;
+  background-color: #000000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------------------------ */
+/* コンテンツ紹介 */
+/* -------------------------*/
+#main-content ul#contents-introduction {
+  display: block;
+  margin-bottom: 6px;
+  padding: 6px 18px;
+  width: 652px;
+  /* 688px -36px(padding) */
+  height: auto;
+  background-color: #DDDDDD;
+}
+
+ul#contents-introduction li {
+  display: inline;
+  float: left;
+}
+
+ul#contents-introduction li a {
+  display: block;
+  width: 222px;
+  /* 224px -2px(border) */
+  height: 70px;
+  border: 1px #000000 solid;
+}
+
+iframe#blockrandom {
+  width: 688px;
+  height: 300px;
+}
+
+#pickup {
+  background-image: url(../img/pickup/bgimg_pickup_02.jpg);
+}
+
+/* ------------------------ */
+/* 零日記 最新情報 */
+/* -------------------------*/
+#infor-zeronikki {
+  margin-bottom: 12px;
+  width: 688px;
+  height: auto;
+  background-color: #555555;
+}
+
+#zeronikki-head {
+  width: 688px;
+  height: auto;
+  background-color: #555555;
+}
+#zeronikki-head .zeronikki-title {
+  padding-left: 32px;
+  background-image: url(../img/bgimg_infor_nikki_title.gif);
+  background-position: 4px 1px;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  line-height: 30px;
+}
+#zeronikki-head .zeronikki-more a {
+  padding-right: 10px;
+  color: #FFFFFF;
+  line-height: 30px;
+}
+
+#zeronikki-body {
+  width: 688px;
+  height: auto;
+  background-color: #555555;
+}
+
+#zeronikki-foot {
+  width: 688px;
+  height: 6px;
+  background-color: #555555;
+}
+
+#nikki-feed {
+  margin: 0 5px;
+  padding: 0;
+  width: 678px;
+  /* 688px -10px(margin) */
+  height: auto;
+  background-color: #FFFFFF;
+}
+
+#nikki-feed dl,
+#nikki-feed dl dt,
+#nikki-feed dl dd {
+  display: block;
+}
+
+#nikki-feed dl dt.nikki-date,
+#nikki-feed dl dd.nikki-title,
+#nikki-feed dl dd.nikki-content {
+  padding: 0 16px;
+}
+
+/* 記事表示部分/コメントなどを囲うブロック要素の属性 */
+#nikki-feed dl dd.nikki-content {
+  line-height: 1.4;
+}
+
+/* 記事内の画像（デフォルトでは左よせ）*/
+#nikki-feed dl dd.nikki-content a img {
+  border: 1px solid #999;
+  margin: 3px;
+}
+
+#nikki-feed dl dd.nikki-content blockquote {
+  width: 90%;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  padding: 0;
+  margin: 10px 0 0 20px;
+}
+
+#nikki-feed dl dd.nikki-content blockquote p {
+  padding: 8px 20px;
+  margin: 0;
+}
+
+#nikki-feed dl dd.nikki-content ol,
+#nikki-feed dl dd.nikki-content ul {
+  margin: 0;
+  padding: 0 0 0 25px;
+}
+
+#nikki-feed dl dd.nikki-content ol li {
+  margin-left: 18px;
+}
+
+#nikki-feed dl dd.nikki-content ul li {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+ul#nikki-news {
+  display: block;
+  margin: 0 5px;
+  padding: 0;
+  width: 678px;
+  /* 688px -10px(margin) */
+  height: auto;
+  background-color: #FFFFFF;
+}
+ul#nikki-news li {
+  display: block;
+  margin: 0 12px;
+  padding: 6px 0;
+  width: 654px;
+  /* 678px -24px(margin) */
+  background-image: url(../img/bg_dotline_navy.gif);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
 #admission {
   margin: 0;
   padding: 0 6px;
-  width: 716px;
-  /* 728px -12px(padding) */
   height: auto;
 }
 
@@ -632,17 +799,14 @@ table.fee-table td {
 #guide {
   margin: 0;
   padding: 0 6px;
-  width: 716px;
-  /* 728px -12px(padding) */
   height: auto;
 }
 #guide table.guide-table {
-  width: 716px;
   border-collapse: collapse;
   border-spacing: 0;
 }
 #guide table.guide-table td {
-  padding: 20px 26px;
+  padding: 20px;
   text-align: left;
   vertical-align: top;
 }
@@ -664,8 +828,6 @@ table.fee-table td {
 #schedule {
   margin: 0;
   padding: 0 6px;
-  width: 716px;
-  /* 728px -12px(padding) */
   height: auto;
 }
 
@@ -728,13 +890,11 @@ table#schedule-table td.sunday {
 #instructor {
   margin: 0;
   padding: 0 6px;
-  width: 716px;
-  /* 728px -12px(padding) */
   height: auto;
 }
 
 .instructor-table {
-  width: 716px;
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -769,8 +929,6 @@ table#schedule-table td.sunday {
 #kids {
   margin: 0;
   padding: 0 6px;
-  width: 716px;
-  /* 728px -12px(padding) */
   height: auto;
   font-size: 1.2em;
 }
@@ -783,15 +941,11 @@ table#schedule-table td.sunday {
 
 #access {
   padding: 0 6px;
-  width: 716px;
-  /* 728px -12px(padding) */
 }
 
 #mapst {
   float: none;
   margin-bottom: 6px;
-  width: 714px;
-  /* 716px -2px(border) */
   height: 498px;
   /* 500px -2px(border) */
   border: 1px #565656 solid;
@@ -799,7 +953,7 @@ table#schedule-table td.sunday {
 
 #gym-infor {
   float: left;
-  width: 448px;
+  width: 410px;
   height: auto;
 }
 #gym-infor table {

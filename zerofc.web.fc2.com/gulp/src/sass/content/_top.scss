@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* ------------------------ */
+/* ピックアップ */
+/* -------------------------*/
+
+#pickup {
+  margin-bottom: 0;
+  width: 688px;
+  height: 180px;
+  background-color: #000000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------------------------ */
+/* コンテンツ紹介 */
+/* -------------------------*/
+
+#main-content ul#contents-introduction {
+  display: block;
+  margin-bottom: 6px;
+  padding: 6px 18px;
+  width: 652px; /* 688px -36px(padding) */
+  height: auto;
+  background-color: #DDDDDD;
+}
+
+ul#contents-introduction li {
+  display: inline;
+  float: left;
+}
+
+ul#contents-introduction li a {
+  display: block;
+  width: 222px; /* 224px -2px(border) */
+  height: 70px;
+  border: 1px #000000 solid;
+}
+
+iframe#blockrandom {
+  width: 688px;
+  height: 300px;
+}
+
+#pickup {
+  background-image: url(../img/pickup/bgimg_pickup_02.jpg);
+}
+
+
+
+
+
+

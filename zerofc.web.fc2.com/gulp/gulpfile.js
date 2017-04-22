@@ -11,8 +11,8 @@ var autoprefixer = require("gulp-autoprefixer");
 
 var APP_ROOT  = "../html";
 
-var SCSS_FILE = "src/sass/*.scss";
-var CSS_FILE  = "src/css/*.css";
+var SCSS_FILE = "src/sass/**/*.scss";
+var CSS_FILE  = "src/css/**/*.css";
 
 var SASS_DIR  = "src/sass"
 var CSS_DIR   = "src/css"

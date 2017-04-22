@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+
+/* ------------------------ */
+/* 零日記 最新情報 */
+/* -------------------------*/
+
+#infor-zeronikki {
+  margin-bottom: 12px;
+  width: 688px;
+  height: auto;
+  background-color: #555555;
+}
+
+#zeronikki-head {
+  width: 688px;
+  height: auto;
+  background-color: #555555;
+
+  .zeronikki-title {
+    padding-left: 32px;
+    background-image: url(../img/bgimg_infor_nikki_title.gif);
+    background-position: 4px 1px;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    line-height: 30px;
+  }
+
+  .zeronikki-more a {
+    padding-right: 10px;
+    color: #FFFFFF;
+    line-height: 30px;
+  }
+}
+
+#zeronikki-body {
+  width: 688px;
+  height: auto;
+  background-color: #555555;
+}
+
+#zeronikki-foot {
+  width: 688px;
+  height: 6px;
+  background-color: #555555;
+}
+
+
+#nikki-feed {
+  margin: 0 5px;
+  padding: 0;
+  width: 678px; /* 688px -10px(margin) */
+  height: auto;
+  background-color: #FFFFFF;
+}
+
+#nikki-feed dl,
+#nikki-feed dl dt,
+#nikki-feed dl dd {
+  display: block;
+}
+
+#nikki-feed dl dt.nikki-date,
+#nikki-feed dl dd.nikki-title,
+#nikki-feed dl dd.nikki-content {
+  padding: 0 16px;
+}
+
+/* 記事表示部分/コメントなどを囲うブロック要素の属性 */
+#nikki-feed dl dd.nikki-content {
+  line-height: 1.4;
+}
+
+/* 記事内の画像（デフォルトでは左よせ）*/
+#nikki-feed dl dd.nikki-content a img {
+  border: 1px solid #999;
+  margin: 3px;
+}
+
+#nikki-feed dl dd.nikki-content blockquote {
+  width: 90%;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  padding: 0;
+  margin: 10px 0 0 20px;
+}
+
+#nikki-feed dl dd.nikki-content blockquote p {
+  padding: 8px 20px;
+  margin: 0;
+}
+
+#nikki-feed dl dd.nikki-content ol,
+#nikki-feed dl dd.nikki-content ul {
+  margin: 0;
+  padding: 0 0 0 25px;
+}
+
+#nikki-feed dl dd.nikki-content ol li {
+  margin-left: 18px;
+}
+
+#nikki-feed dl dd.nikki-content ul li {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+ul#nikki-news {
+  display: block;
+  margin: 0 5px;
+  padding: 0;
+  width: 678px; /* 688px -10px(margin) */
+  height: auto;
+  background-color: #FFFFFF;
+
+  li {
+    display: block;
+    margin: 0 12px;
+    padding: 6px 0;
+    width: 654px; /* 678px -24px(margin) */
+    background-image: url(../img/bg_dotline_navy.gif);
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
+}

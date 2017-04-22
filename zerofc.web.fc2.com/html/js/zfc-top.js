@@ -24,11 +24,11 @@
             document.getElementById('blockrandom').style.height = h + 60 + 'px';
         }
       } else {
-        $(this).height(this.contentWindow.document.documentElement.scrollHeight);  
+        $(this).height(this.contentWindow.document.documentElement.scrollHeight);
       }
     });
     $('iframe').triggerHandler('load');
-  
+
     var nikki_feed = new google.feeds.Feed("http://feeds.fc2.com/fc2/xml?host=zfcj.blog98");
     nikki_feed.setNumEntries(numEntryNikki); //エントリー数
     nikki_feed.load(function(result) {
@@ -84,7 +84,7 @@
         break;
       default:
         break;
-    } 
+    }
     return date;
   }
 
