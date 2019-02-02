@@ -11,7 +11,149 @@
 <meta name="description" content="岡山の総合格闘技ジム、ゼロ戦クラブの練習スケジュールです。曜日毎に初心者クラスやキッズクラス、打撃クラスや柔術クラス、フリースパーリングなどを設けています。" />
 <meta name="keywords" content="岡山,倉敷,水島,格闘技,柔術,修斗,練習,スケジュール" />
 <title>練習スケジュール｜岡山総合格闘技ジム　ゼロ戦クラブ</title>
-<link rel="stylesheet" href="/css/style.min.css" media="all" />
+<style type="text/css">
+<!--
+	@import url("/css/initialization.css");
+	@import url("/css/base.css");
+	@import url("/css/font.css");
+	@import url("/css/side.css");
+	@import url("/css/decoration.css");
+
+/************/
+/* SCHEDULE */
+/************/
+
+#schedule {  
+    
+    
+    
+    
+    
+    
+	margin: 0;
+	padding: 0 6px;
+	width: 716px; /* 728px -12px(padding) */
+	height: auto;
+}
+
+table#schedule-table {  
+    
+    
+    
+    
+    
+    
+	table-layout:fixed;
+	margin-bottom: 12px;
+	width: 100%;
+	height: auto;
+	background-color: #333333;
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+
+table#schedule-table th,
+table#schedule-table td {  
+    
+    
+    
+    
+    
+    
+	padding: 3px 0; 
+}
+
+table#schedule-table th {  
+    
+    
+    
+    
+    
+    
+	background-color: #EEEEEE;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+	text-align: center;
+}
+
+table#schedule-table td {  
+    
+    
+    
+    
+    
+    
+	background-color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	border-color: transparent #EEEEEE #EEEEEE transparent;
+	text-align: center;
+}
+
+table#schedule-table th.saturday {  
+    
+    
+    
+    
+    
+    
+  background-color: #AEE1FF; 
+}
+
+table#schedule-table td.saturday {  
+    
+    
+    
+    
+    
+    
+  background-color: #EAF7FF; 
+}
+
+table#schedule-table th.sunday {  
+    
+    
+    
+    
+    
+    
+  background-color: #FFC1C3; 
+}
+
+table#schedule-table td.sunday {  
+    
+    
+    
+    
+    
+    
+  background-color: #FFE6E7; 
+}
+
+.schedule-text {  
+    
+    
+    
+    
+    
+    
+	margin-bottom: 1em;
+}
+
+.schedule-text .schedule-text-heading {  
+    
+    
+    
+    
+    
+    
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+-->
+</style>
 <script type="text/javascript" src="/js/prototype.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/js/jquery/interface/scrolltopcontrol.js"></script>
@@ -47,12 +189,12 @@ function initialize() {
       	}
     });
 
-	$jq("#gotop").click(function() {
+	$jq("#gotop").click(function() {	
 		$jq("#header").ScrollTo(1000, 'easeout');
 		return false;
 	});
 }
-
+	
 function dateFormat(str, pattern) {
 	var myDate=new Date(str);
 	var YY = myDate.getFullYear();
@@ -84,7 +226,7 @@ function dateFormat(str, pattern) {
 			break;
 		default:
 			break;
-	}
+	}	
 	return date;
 }
 
@@ -92,8 +234,7 @@ google.setOnLoadCallback(initialize);
 </script>
 </head>
 <body>
-<script src="/include/fb_sdk.js"></script>
-<script src="/include/header.js"></script>
+<script type="text/javascript" src="/include/header.js"></script>
 <div id="navigation">
  <ul class="navigation-container">
   <li class="navi-top"><a href="/" title="TOP" target="_self"><span>TOP</span></a></li>
@@ -112,20 +253,20 @@ google.setOnLoadCallback(initialize);
 <div id="wrapper">
  <div id="container" class="clearfix">
   <div id="main-content">
-
+  
    <h3>練習スケジュール</h3>
    <div id="schedule">
-
-    <table id="schedule-table" cellspacing="0">
+   
+    <table width="102%" cellspacing="0" id="schedule-table">
      <tr>
-      <th>&nbsp;</th>
-      <th>月曜日</th>
-      <th>火曜日</th>
-      <th>水曜日</th>
-      <th>木曜日</th>
-      <th>金曜日</th>
-      <th class="saturday">土曜日</th>
-      <th class="sunday">日曜日</th>
+      <th width="6%">&nbsp;</th>
+      <th width="14%">月曜日</th>
+      <th width="14%">火曜日</th>
+      <th width="14%">水曜日</th>
+      <th width="14%">木曜日</th>
+      <th width="14%">金曜日</th>
+      <th width="13%" class="saturday">土曜日</th>
+      <th width="11%" class="sunday">日曜日</th>
      </tr>
      <tr>
       <th rowspan="2">9:00</th>
@@ -181,7 +322,7 @@ google.setOnLoadCallback(initialize);
       <!--<th>11:30</th>-->
       <td>&nbsp;</td>
       <td>フィットネス&nbsp;</td>
-      <td></td>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>フィットネス&nbsp;</td>
       <td class="saturday">&nbsp;</td>
@@ -190,8 +331,8 @@ google.setOnLoadCallback(initialize);
      <tr>
       <th rowspan="2">12:00</th>
       <td>&nbsp;</td>
-      <td></td>
-      <td></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td class="saturday">&nbsp;</td>
@@ -201,7 +342,7 @@ google.setOnLoadCallback(initialize);
       <!--<th>12:30</th>-->
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td></td>
+      <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td class="saturday">&nbsp;</td>
@@ -281,30 +422,30 @@ google.setOnLoadCallback(initialize);
       <!--<th>16:30</th>-->
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td>キッズ</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td class="saturday">キッズ</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
       <td class="sunday">&nbsp;</td>
      </tr>
      <tr>
       <th rowspan="2">17:00</th>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td>キッズ</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td class="saturday">キッズ</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
       <td class="sunday">レディスキック&nbsp;</td>
      </tr>
      <tr>
       <!--<th>17:30</th>-->
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td>キッズ</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td class="saturday">キッズ</td>
+      <td>&nbsp;</td>
+      <td class="saturday">&nbsp;</td>
       <td class="sunday">レディスキック&nbsp;</td>
      </tr>
      <tr>
@@ -329,26 +470,24 @@ google.setOnLoadCallback(initialize);
      </tr>
      <tr>
       <th rowspan="2">19:00</th>
-      <td>フィットネス</td>
-      <td>キック<BR>
-    ボクシング</td>
-      <td>レスリング<BR>
+      <td>初級キックボクシング</td>
+      <td>初級キックボクシング</td>
+      <td>ベーシック<BR>
     総合</td>
-      <td>打撃クラス</td>
-      <td>ビギナー<BR clear="none">
+      <td>初級打撃クラス</td>
+      <td>初級<BR clear="none">
     MMA</td>
       <td class="saturday">柔術</td>
       <td class="sunday">フィットネス</td>
      </tr>
      <tr>
       <!--<th>19:00</th>-->
-      <td>フィットネス</td>
-      <td>キック<BR>
-    ボクシング</td>
-      <td>レスリング<BR>
+      <td><p>初級キックボクシング</p></td>
+      <td>初級キックボクシング</td>
+      <td>ベーシック<BR>
     総合</td>
-      <td>打撃クラス</td>
-      <td>ビギナー<BR clear="none">
+      <td>初級打撃クラス</td>
+      <td>初級<BR clear="none">
     MMA</td>
       <td class="saturday">柔術</td>
       <td class="sunday">柔術</td>
@@ -358,11 +497,10 @@ google.setOnLoadCallback(initialize);
       <td>組技</td>
       <td>キック<BR>
     ボクシング</td>
-      <td>レスリング<BR>
+      <td>ベーシック<BR>
     総合</td>
       <td>打撃クラス</td>
-      <td>ビギナー<BR clear="none">
-    MMA</td>
+      <td>MMA</td>
       <td class="saturday">柔術</td>
       <td class="sunday">柔術</td>
      </tr>
@@ -374,29 +512,28 @@ google.setOnLoadCallback(initialize);
       <td>レスリング<BR>
     総合</td>
       <td>打撃クラス</td>
-      <td>ビギナー<BR clear="none">
-    MMA</td>
+      <td>MMA</td>
       <td class="saturday">柔術</td>
       <td class="sunday">柔術</td>
      </tr>
      <tr>
       <th rowspan="2">21:00</th>
-      <td>&nbsp;組技</td>
-      <td>&nbsp;</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td class="saturday"></td>
+      <td>&nbsp;フリークラス</td>
+      <td>フリークラス</td>
+      <td>フリークラス</td>
+      <td>フリークラス</td>
+      <td>フリークラス</td>
+      <td class="saturday">フリークラス</td>
       <td class="sunday"></td>
      </tr>
      <tr>
       <!--<th>21:30</th>-->
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td class="saturday">&nbsp;</td>
+      <td>フリークラス</td>
+      <td>フリークラス</td>
+      <td>フリークラス</td>
+      <td>フリークラス</td>
+      <td>フリークラス</td>
+      <td class="saturday">フリークラス</td>
       <td class="sunday">&nbsp;</td>
      </tr>
      <tr>
@@ -463,7 +600,7 @@ google.setOnLoadCallback(initialize);
 
 <p class="schedule-text">クラスが入っている時間はクラスが優先となります。　その他の時間はフリーなのでお好きにお使いください</p>
 
-<p class="schedule-text"><FONT size="+2"><B>ジムは24時間練習できます</B></FONT><br />
+<p class="schedule-text"><span class="schedule-text-heading">ジムは24時間使用できます</span><br />
 ジムを使いたい方ゼロ戦ライングループかメールで連絡して下さい<br />
 練習が終わったら掃除は必ずして下さい<br />
 </p>
@@ -497,22 +634,26 @@ google.setOnLoadCallback(initialize);
 アマチュア修斗は勿論、JMLなど総合格闘技の試合を目指す方は是非練習してください<br />
 </p>
 <p class="schedule-text">
-<span class="schedule-text-heading">ビギナーMMAクラスの内容</span><br />
+<span class="schedule-text-heading">初級MMAクラスの内容</span><br />
 総合格闘技の基礎を学びます<br />
 打　投　極の形の基礎（エビなどのムーブ　受身　シャドー　関節技）の基礎を学びます　<br />
 入会された方はまずここで動きを身につけてください　補強もやりますので体力つきます<br />
 また技研究もやります　最初の基礎を是非練習してください<br />
 </p>
-<p class="schedule-text">
-<span class="schedule-text-heading">柔術クラスの内容</span><br />
-総合格闘技の原型であるBJJ（ブラジリアン柔術）を学びます<br />
-総合格闘技の最大手UFCはグレーシー柔術の選手であるホイス・グレーシーの活躍から始まりました　<br />
-寝技は、胴衣がある方が身に着けやすいです　胴衣の絞めなどはここでしか覚えられません<br />
-比較的、年齢の高い方もやりやすいクラスです　MMAの原型である柔術を是非練習してください<br />
+<p class="schedule-text"><span class="schedule-text-heading">初級キック、打撃クラスの内容</span><br />
+  打撃の基礎クラスです　主にシャドー　ミット打ちのクラスとなります<br />
+  主に初心者の方を対象にしたクラスです　スパーリングはありません<br />
+  入会された方はまずここで動きを身につけてください　<br />
+  最初の基礎を是非練習してください</p>
+<p class="schedule-text"><span class="schedule-text-heading">柔術クラスの内容</span><br />
+  総合格闘技の原型であるBJJ（ブラジリアン柔術）を学びます<br />
+  総合格闘技の最大手UFCはグレーシー柔術の選手であるホイス・グレーシーの活躍から始まりました　<br />
+  寝技は、胴衣がある方が身に着けやすいです　胴衣の絞めなどはここでしか覚えられません<br />
+  比較的、年齢の高い方もやりやすいクラスです　MMAの原型である柔術を是非練習してください<br />
 </p>
 
 <p class="schedule-text">
-<span class="schedule-text-heading">フィットクラスの内容</span><br />
+  <span class="schedule-text-heading">フィットクラスの内容</span><br />
 総合格闘技の動きなどをフィットネスに応用したクラスです<br />
 バランスボール　ラダー　ロープ　バーンマシーンなど最新MMA器具を使いフィットネスをやります<br />
 クラスは昼間や休日にもあるので主婦の方や夜勤仕事の方にお勧めです<br />
@@ -526,13 +667,13 @@ google.setOnLoadCallback(initialize);
 進級制度も取り入れていますので上達の具合を確かめていけます　上達したら一般クラスとの併用もできます　今、最年少は3歳です<br />
 キッズの試合も数多くあります　イジメ対策やお子さんを強くしたい方は是非キッズクラスでお子さんを練習させてください<br />
 </p>
-<SPAN class="schedule-text-heading"><B><FONT size="+2">レディスキッククラスの内容</FONT></B></SPAN><br />
+<span class="schedule-text"><span class="schedule-text-heading">レディースキッククラスの内容</span></span><br />
 女性専用のキックボクシングクラスです<br />
 女性だけなので気兼ねせずに練習ができます<br />
 ダイエットにも有効です　ストレス発散にパンチ　キックを打ち込んでみませんか！
 <p class="schedule-text">
 試合・セミナー・合同練習等の開催日は練習やクラスをお休みすることがあります。<br />
-下記の告知やブログに情報が掲載されるので、チェックしておいて下さい。
+下記の告知やブログに情報が掲載されるので、チェックしておいて下さい。 
 </p>
 
 <p class="schedule-text">
@@ -547,8 +688,19 @@ google.setOnLoadCallback(initialize);
   </div><!-- #main-content END -->
 
   <div id="right-content">
-    <script src="/include/instructor.js"></script>
-    <script src="/include/fb_page.js"></script>
+   <script src="/include/zerobbs.js"></script>
+   <!--<script src="/include/instructor.js"></script>-->
+
+   <div id="zero-twitter">
+    <div id="zero-twitter-title"><span><strong>zerofighterclubのつぶやき</strong></span></div>
+    <div id="twitter-feed">
+     <div id="twitter-loader" style="padding:60px 0; text-align:center"><img src="/img/loader_squares.gif" width="43" height="11" alt="loading..." /></div>
+    </div>
+    <p style="padding:4px 6px; text-align:center;">
+      <a style="line-height:60px;" href="http://twitter.com/zerofighterclub" title="『ゼロ戦クラブのTwitter』岡山総合格闘技団体ゼロ戦クラブでございます　コツコツやってます" target="_blank"><img src="/img/banner_twitter.gif" width="200" height="60" align="つぶやきをもっと見る" border="0" /></a>
+    </p>
+   </div><!-- #zero-twitter END -->
+
   </div><!-- right-content END -->
 
  </div><!-- #container END -->

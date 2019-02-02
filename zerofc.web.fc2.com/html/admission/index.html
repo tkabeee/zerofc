@@ -12,7 +12,68 @@
 <meta name="keywords" content="岡山,倉敷,水島,格闘技,柔術,修斗,入会,案内,会費" />
 <META name="GENERATOR" content="">
 <title>入会のご案内｜岡山総合格闘技ジム　ゼロ戦クラブ</title>
-<link rel="stylesheet" href="/css/style.min.css" media="all" />
+<style type="text/css">
+<!--
+	@import url("/css/initialization.css");
+	@import url("/css/base.css");
+	@import url("/css/font.css");
+	@import url("/css/side.css");
+	@import url("/css/decoration.css");
+
+/************/
+/* ADDMISSION */
+/************/
+
+#admission {  
+    
+    
+    
+    
+	margin: 0;
+	padding: 0 6px;
+	width: 716px; /* 728px -12px(padding) */
+	height: auto;
+}
+
+table.fee-table {  
+    
+    
+    
+    
+	margin-bottom: 1em;
+	border-collapse: separate;
+	border-spacing: 3px;
+	border: 1px #000000 solid;
+}
+
+table.fee-table td {  
+    
+    
+    
+    
+	padding: 6px 10px;
+	border: 1px #000000 solid;
+}
+
+.admission-text {  
+    
+    
+    
+    
+	margin-bottom: 1em;
+}
+
+.admission-text .admission-text-heading {  
+    
+    
+    
+    
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+-->
+</style>
 <script type="text/javascript" src="/js/prototype.js"></script>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript" src="/js/jquery/interface/scrolltopcontrol.js"></script>
@@ -43,12 +104,12 @@ function initialize() {
         }
     });
 
-	$jq("#gotop").click(function() {
+	$jq("#gotop").click(function() {	
 		$jq("#header").ScrollTo(1000, 'easeout');
 		return false;
 	});
 }
-
+	
 function dateFormat(str, pattern) {
 	var myDate=new Date(str);
 	var YY = myDate.getFullYear();
@@ -80,16 +141,14 @@ function dateFormat(str, pattern) {
 			break;
 		default:
 			break;
-	}
+	}	
 	return date;
 }
 
 google.setOnLoadCallback(initialize);
 </script>
 </head>
-<body>
-<script src="/include/fb_sdk.js"></script>
-<script src="/include/header.js"></script>
+<BODY><script type="text/javascript" src="/include/header.js"></script>
 <div id="navigation">
  <ul class="navigation-container">
   <li class="navi-top"><a href="/" title="TOP" target="_self"><span>TOP</span></a></li>
@@ -108,7 +167,7 @@ google.setOnLoadCallback(initialize);
 <div id="wrapper">
  <div id="container" class="clearfix">
   <div id="main-content">
-
+  
    <h3>入会のご案内</h3>
    <div id="admission">
 
@@ -116,27 +175,27 @@ google.setOnLoadCallback(initialize);
  <tr>
     <TD rowspan="3">会費&nbsp;</TD>
     <td align="center" valign="middle">一般</td>
-  <td>※月額　7200円</td>
+  <td>※月額　6800(税抜）円</td>
  </tr>
  <tr>
   <td>女性＆高校生以下</td>
-  <td>※月額　4200円</td>
+  <td>※月額　3800(税抜）円</td>
  </tr><tr>
     <td>&nbsp;大学生＆専門学生</td>
-    <td>※月額　5200円</td>
+    <td>※月額　4800(税抜）円</td>
   </tr><tr>
   <td colspan="3">■別途、入会金5000円が必要です■</td>
  </tr>
 </table>
 
-<p class="admission-text">会費は、月謝2か月分と銀行引落としになりますので銀行印と口座番号がわかるものを御用意ください<br />
-※上記の金額は口座引落し価格です。手払いは1000円アップとなります<BR>
-見学・体験等の申し込みや、詳細についてお問い合わせ等は、メールか<br />
-ゼロ戦クラブ　086-244-6806<br />
-つながらない場合は、090-8364-8271<br />
-影山(カゲヤマ)代表までご連絡ください。
-
-</p>
+<p align="left" class="admission-text"><strong> 御用意するモノ</strong></p>
+<p align="left" class="admission-text">月謝2か月分と銀行口座のキャッシュカードと銀行印<br />
+  またはクレジットカードを御用意ください<br />
+  ※上記の金額は引落し価格です。<br />手払いや再引き落としは1000円アップとなります<BR>
+  見学・体験等の申し込みや、詳細についてお問い合わせ等は、メールか<br />
+  ゼロ戦クラブ　086-244-6806<br />
+  つながらない場合は、090-8364-8271<br />
+  影山(カゲヤマ)代表までご連絡ください。</p>
  <h3>スポーツ安全保険加入制度<a name="hoken"></a></h3>
 		    <p> スポーツ安全保険への加入をお勧めします。 <br>
   掛け金は年間１６００円で、病院や接骨院に通う怪我なら、練習中の怪我でも試合中の怪我でも保険金が支払われます。</p>
@@ -210,15 +269,24 @@ google.setOnLoadCallback(initialize);
 初心者の方、大歓迎です　参加されたい方はメール<br />
 または、mixiコミュがありますのでそこで表明してください。<br />
 </p>
-
+   
    </div><!-- #guide END -->
 
   </div><!-- #main-content END -->
 
   <div id="right-content">
-    <script src="/include/instructor.js"></script>
-    <script src="/include/fb_page.js"></script>
-  </div><!-- #zero-twitter END -->
+   <script src="/include/zerobbs.js"></script>
+   <!--<script src="/include/instructor.js"></script>-->
+
+   <div id="zero-twitter">
+    <div id="zero-twitter-title"><span><strong>zerofighterclubのつぶやき</strong></span></div>
+    <div id="twitter-feed">
+     <div id="twitter-loader" style="padding:60px 0; text-align:center"><img src="/img/loader_squares.gif" width="43" height="11" alt="loading..." /></div>
+    </div>
+    <p style="padding:4px 6px; text-align:center;">
+      <a style="line-height:60px;" href="http://twitter.com/zerofighterclub" title="『ゼロ戦クラブのTwitter』岡山総合格闘技団体ゼロ戦クラブでございます　コツコツやってます" target="_blank"><img src="/img/banner_twitter.gif" width="200" height="60" align="つぶやきをもっと見る" border="0" /></a>
+    </p>
+   </div><!-- #zero-twitter END -->
 
   </div><!-- right-content END -->
 
