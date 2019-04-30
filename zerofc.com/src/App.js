@@ -3,6 +3,7 @@ import { Root, Routes, addPrefetchExcludes } from 'react-static'
 //
 import { Link, Router } from 'components/Router'
 import Header from 'containers/Header'
+import Footer from 'containers/Footer'
 import Navigation from 'containers/Navigation'
 
 import './app.css'
@@ -22,6 +23,7 @@ function App() {
           </Router>
         </React.Suspense>
       </div>
+      <Footer />
     </Root>
   )
 }
