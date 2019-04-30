@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/************/
+/* FAQ */
+/************/
+
+#faq {
+  padding: 0 1em;
+}
+
+#faq p {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+}
