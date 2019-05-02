@@ -3542,6 +3542,17 @@ extract-css-chunks-webpack-plugin@^4.0.2:
     schema-utils "^1.0.0"
     webpack-sources "^1.1.0"
 
+extract-css-chunks-webpack-plugin@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.3.2.tgz#dab841c62c53b50ce331eb2442f9d6f2fdc19f28"
+  integrity sha512-dTL4rwoMIwItq8KRhhgdHPcgFf7DwFRRcQBLj5F3k/WL2pSkYN//rS/dNUuRhbNgTMOV0HT60WjCVd9UGDaSOQ==
+  dependencies:
+    loader-utils "^1.1.0"
+    lodash "^4.17.11"
+    normalize-url "^2.0.1"
+    schema-utils "^1.0.0"
+    webpack-sources "^1.1.0"
+
 extract-text-webpack-plugin@^4.0.0-beta.0:
   version "4.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-4.0.0-beta.0.tgz#f7361d7ff430b42961f8d1321ba8c1757b5d4c42"
@@ -5715,7 +5726,7 @@ node-releases@^1.1.13:
   dependencies:
     semver "^5.3.0"
 
-node-sass@^4.12.0:
+node-sass@^4.11.0, node-sass@^4.12.0:
   version "4.12.0"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.12.0.tgz#0914f531932380114a30cc5fa4fa63233a25f017"
   integrity sha512-A1Iv4oN+Iel6EPv77/HddXErL2a+gZ4uBeZUy+a8O35CFYTXhgA8MgLCWBtwpGZdCvTvQ9d+bQxX/QC36GDPpQ==
@@ -7019,6 +7030,15 @@ react-static-plugin-reach-router@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/react-static-plugin-reach-router/-/react-static-plugin-reach-router-7.0.0.tgz#4a2a9d5c43291fe29cebc88235a7641a1f8c247c"
   integrity sha512-54lGGgYthTVLYmPqeUBrv1sAHjxXKXm8Fg8vNEoTGapDS4nq6Hi+IwC0tLljxgAzk3Noh7tn1FcUCIs7YGPjeA==
+
+react-static-plugin-sass@^7.0.10:
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/react-static-plugin-sass/-/react-static-plugin-sass-7.0.10.tgz#73c2ecfc363d98ca44487bbd537a650849134758"
+  integrity sha512-5aY7Sa789yq8mLhDnJ3VJVqWDj3vb4m6XMM2PqP0tSn4Z7rlKHa3KrYE4c/JVyO1JhP5TxKQla7Yz4Cs73rJ/w==
+  dependencies:
+    extract-css-chunks-webpack-plugin "^4.3.2"
+    node-sass "^4.11.0"
+    sass-loader "^7.1.0"
 
 react-static-plugin-sitemap@^7.0.0:
   version "7.0.0"
