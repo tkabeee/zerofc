@@ -8,8 +8,8 @@ module.exports = {
     style: './style.scss',
   },
   output: {
-    path: __dirname + '/public/css',
-    filename: '[name].css'
+    path: path.join(__dirname, './src'),
+    filename: 'app.css'
   },
   module: {
     rules: [
@@ -26,6 +26,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('app.css')
   ]
 }
