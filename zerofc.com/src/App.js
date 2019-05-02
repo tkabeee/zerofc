@@ -2,10 +2,10 @@ import React from 'react'
 import { Root, Routes, addPrefetchExcludes } from 'react-static'
 //
 import { Link, Router } from 'components/Router'
-import Header from 'containers/Header'
-import Footer from 'containers/Footer'
-import Navigation from 'containers/Navigation'
-import FbPage from 'containers/FbPage'
+import Header from 'components/header'
+import Footer from 'components/footer'
+import Navigation from 'components/navigation'
+import FbPage from 'components/widgets/fb-page'
 
 import './app.css'
 

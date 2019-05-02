@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './style.scss'
+
 export default () => (
   <header class="header-container">
     <h1 id="logo"><a href="/" title=""><span>岡山総合格闘技ジム&nbsp;ゼロ戦クラブ</span></a></h1>
