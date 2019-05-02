@@ -1,7 +1,7 @@
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import path from 'path';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
-export default {
+module.exports = {
   mode: process.env.NODE_ENV || 'development',
   context: path.join(__dirname, './src/styles'),
   entry: {
