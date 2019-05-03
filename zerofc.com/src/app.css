@@ -1868,10 +1868,13 @@
   max-height: 100rem !important; }
 
 body {
-  padding-bottom: 1em;
-  background-color: #fff;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #000;
   color: #333333;
-  line-height: 1.3; }
+  line-height: 1.4; }
 
 a:link {
   color: #0646A0;
@@ -1885,6 +1888,9 @@ a:hover,
 a:active {
   color: #EE0000;
   text-decoration: underline; }
+
+.global-header {
+  background-color: #fff; }
 
 .header__container {
   display: flex;
@@ -1913,7 +1919,14 @@ a:active {
     object-position: center; }
 
 .header__menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  letter-spacing: -.40em;
   margin-left: auto; }
+  .header__menu-list > *,
+  .header__menu-list li, .header__menu-list dt, .header__menu-list dd {
+    letter-spacing: normal; }
   .header__menu-list .list-item {
     display: inline-block;
     font-size: 0.875rem; }
@@ -1948,13 +1961,14 @@ a:active {
     text-align: center; }
 
 .main__wrapper {
-  margin: 0 auto;
-  width: 960px; }
+  background-color: #fff; }
 
 .main__container {
   display: flex;
   flex-direction: row;
-  padding: 1rem 0; }
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 960px; }
 
 .main-content {
   flex: 1; }
@@ -1971,6 +1985,42 @@ a:active {
   padding: 1rem 0;
   background-color: #343a40;
   color: #fff;
+  text-align: center; }
+
+.footer__container {
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  width: 960px;
+  color: #fff;
+  font-size: 0.875rem; }
+
+.footer__menu {
+  margin-bottom: 1.5rem; }
+
+.footer__menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  letter-spacing: -.40em; }
+  .footer__menu-list > *,
+  .footer__menu-list li, .footer__menu-list dt, .footer__menu-list dd {
+    letter-spacing: normal; }
+  .footer__menu-list:nth-child(n+2) {
+    margin-top: 0.5rem; }
+  .footer__menu-list .list-item {
+    display: inline-block;
+    font-size: 0.875rem; }
+    .footer__menu-list .list-item:nth-child(n+2) {
+      margin-left: 1em; }
+    .footer__menu-list .list-item a {
+      color: #fff; }
+
+.description {
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem; }
+
+.copyright {
+  font-size: 0.75rem;
   text-align: center; }
 
 .fas {

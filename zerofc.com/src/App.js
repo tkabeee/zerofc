@@ -33,9 +33,7 @@ function App() {
               </a>
             </div>
             <div className="side__column side__column-unit zero-instructor">
-              <a href="/instructor/" title="インストラクターの紹介" target="_self">
-                <span>インストラクター紹介</span>
-              </a>
+              <Link to="/instructor/" title="インストラクターの紹介"><span>インストラクター紹介</span></Link>
             </div>
             <FbPage />
           </div>

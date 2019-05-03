@@ -1,4 +1,5 @@
 .global-header {
+  background-color: $white;
 }
 
 .header__container {
@@ -34,6 +35,7 @@
 }
 
 .header__menu-list {
+  @include reset-list;
   margin-left: auto;
 
   .list-item {

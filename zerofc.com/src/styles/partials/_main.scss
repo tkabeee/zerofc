@@ -1,12 +1,13 @@
 .main__wrapper {
-  margin: 0 auto;
-  width: $desktop-client-width;
+  background-color: $white;
 }
 
 .main__container {
   display: flex;
   flex-direction: row;
+  margin: 0 auto;
   padding: $space-2 0;
+  width: $desktop-client-width;
 }
 
 .main-content {
