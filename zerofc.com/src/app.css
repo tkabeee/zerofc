@@ -1995,6 +1995,10 @@ a:active {
 .main-content {
   flex: 1; }
 
+.main__frame {
+  width: 688px;
+  height: 900px; }
+
 .side-content {
   margin-left: 1rem;
   width: 260px; }
