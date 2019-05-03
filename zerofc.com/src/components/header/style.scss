@@ -1,0 +1,10 @@
+.global-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__menu-list {
+  .list-item {
+    display: inline-block;
+  }
+}
