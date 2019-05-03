@@ -34,7 +34,7 @@ export default () => (
           <li className="list-item"><Link to="/sitemap/" title="サイトマップ">サイトマップ</Link></li>
         </ul>
       </div>
-      <h2 className="description">打撃・グラップリング・柔術・レスリング・キックボクシングなど各自の希望に合わせた練習を行っています。<br />初心者や未経験の方でも楽しく練習ができる格闘技ジムです。　日本修斗協会公認オフィシャルジムとして岡山・倉敷・水島・総社で活動中です。</h2>
+      <h2 className="description">打撃・グラップリング・柔術・レスリング・キックボクシングなど各自の希望に合わせた練習を行っています。<br />初心者や未経験の方でも楽しく練習ができる格闘技ジムです。日本修斗協会公認オフィシャルジムとして岡山・倉敷・水島・総社で活動中です。</h2>
       <p className="copyright">&copy; 2012 ZERO FIGHTER CLUB All rights reserved.</p>
     </div>
   </footer>
