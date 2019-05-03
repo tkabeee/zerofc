@@ -4,7 +4,7 @@
 .header__container {
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: center;
   margin: 0 auto;
   width: $column-primary-width;
 }
@@ -34,8 +34,14 @@
 }
 
 .header__menu-list {
+  margin-left: auto;
+
   .list-item {
     display: inline-block;
     font-size: $font-size-sm;
+
+    &:nth-child(n+2) {
+      margin-left: 1em;
+    }
   }
 }
