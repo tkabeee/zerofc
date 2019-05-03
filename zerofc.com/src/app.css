@@ -1995,6 +1995,22 @@ a:active {
 .main-content {
   flex: 1; }
 
+.main__image {
+  position: relative;
+  height: 170px;
+  background-image: url("/images/main_image_02.jpg");
+  background-repeat: no-repeat;
+  background-size: contain; }
+  .main__image .inside-text {
+    position: absolute;
+    top: 90px;
+    right: 12px;
+    bottom: 12px;
+    left: 264px;
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.3; }
+
 .main__frame {
   width: 688px;
   height: 900px; }
