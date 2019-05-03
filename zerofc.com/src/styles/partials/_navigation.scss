@@ -20,7 +20,15 @@
 
   a {
     display: block;
+    padding: $space-2 $space-1;
     color: $white;
     text-align: center;
+
+    &:hover {
+      background-color: $gray-900;
+    }
   }
 }
+
+.nav-item-schedule { flex: 1.2; }
+.nav-item-access   { flex: 1.2; }
