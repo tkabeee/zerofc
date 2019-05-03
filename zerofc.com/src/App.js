@@ -27,15 +27,17 @@ function App() {
             </React.Suspense>
           </div>
           <div className="side-content">
-            <div className="side__column side__column-unit zero-diary">
+            <div className="side__column side__column-unit col-unit-diary">
               <a href="http://zfcj.blog98.fc2.com/" title="『零日記』岡山のゼロ戦クラブの日常をつづっているブログ" target="_blank">
                 <span>零日記</span>
               </a>
             </div>
-            <div className="side__column side__column-unit zero-instructor">
+            <div className="side__column side__column-unit col-unit-instructor">
               <Link to="/instructor/" title="インストラクターの紹介"><span>インストラクター紹介</span></Link>
             </div>
-            <FbPage />
+            <div className="side__column">
+              <FbPage />
+            </div>
           </div>
         </main>
       </div>

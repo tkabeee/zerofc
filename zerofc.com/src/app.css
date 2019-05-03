@@ -1982,10 +1982,16 @@ a:active {
 
 .side__column-unit a {
   display: block;
-  padding: 1rem 0;
+  padding: 2rem 0;
   background-color: #343a40;
   color: #fff;
   text-align: center; }
+
+.col-unit-diary a {
+  background-color: #495057; }
+
+.col-unit-instructor a {
+  background-color: #c20404; }
 
 .footer__container {
   margin: 0 auto;
@@ -2024,4 +2030,5 @@ a:active {
   text-align: center; }
 
 .fas {
-  margin-right: .2em; }
+  margin-right: .2em;
+  color: #c20404; }

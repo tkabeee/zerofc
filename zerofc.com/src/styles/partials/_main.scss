@@ -28,9 +28,21 @@
 .side__column-unit {
   a {
     display: block;
-    padding: $space-2 0;
+    padding: $space-4 0;
     background-color: $dark;
     color: $white;
     text-align: center;
+  }
+}
+
+.col-unit-diary {
+  a {
+    background-color: $gray-700;
+  }
+}
+
+.col-unit-instructor {
+  a {
+    background-color: $secondary;
   }
 }
