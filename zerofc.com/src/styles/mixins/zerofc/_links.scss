@@ -1,0 +1,76 @@
+@mixin link-normal-color($color: $anchor-visited-color) {
+  &:link {
+    color: $color;
+  }
+}
+
+@mixin link-visited-color($color: $anchor-visited-color) {
+  &:visited {
+    color: $color;
+  }
+}
+
+@mixin link-hover-color($color: $anchor-hover-color) {
+  &:hover {
+    color: $color;
+  }
+}
+
+@mixin link-active-color($color: $anchor-active-color) {
+  &:active {
+    color: $color;
+  }
+}
+
+@mixin link-focus-color($color: $anchor-focus-color) {
+  &:focus {
+    color: $color;
+  }
+}
+
+@mixin link-all-color($color: $anchor-link-color) {
+  @include link-normal-color($color);
+  @include link-visited-color($color);
+  @include link-hover-color($color);
+  @include link-active-color($color);
+  @include link-focus-color($color);
+}
+
+@mixin link-no-decoration--hovered {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin link-underline--hovered {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin link-dotted-underline--hovered {
+  &:hover {
+    margin-bottom: 1px;
+    text-decoration: none;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+  }
+}
+
+@mixin link-no-transparent--hovered {
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@mixin link-transparent--hovered($opacity: .8) {
+  &:hover {
+    opacity: $opacity;
+  }
+}
+
+@mixin link-line-through--hovered {
+  &:hover {
+    text-decoration: line-through;
+  }
+}

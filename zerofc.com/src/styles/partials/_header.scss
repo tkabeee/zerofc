@@ -15,6 +15,8 @@
 }
 
 .site-title__link {
+  @include link-all-color($black);
+  @include link-no-decoration--hovered;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -44,6 +46,10 @@
 
     &:nth-child(n+2) {
       margin-left: 1em;
+    }
+
+    a {
+      @include link-all-color($black);
     }
   }
 }

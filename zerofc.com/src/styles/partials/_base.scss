@@ -5,17 +5,17 @@ body {
 }
 
 a:link {
-  color: #0646A0;
+  color: $anchor-link-color;
   text-decoration: none;
 }
 
 a:visited {
-  color: #551A8B;
+  color: $anchor-visited-color;
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-  color: #EE0000;
+  color: $anchor-hover-color;
   text-decoration: underline;
 }
