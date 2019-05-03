@@ -17,8 +17,8 @@ function App() {
     <Root>
       <Header />
       <Navigation />
-      <div class="wrapper">
-        <div class="container">
+      <div className="main__wrapper">
+        <main class="main__container">
           <div class="main-content">
             <React.Suspense fallback={<em>Loading...</em>}>
               <Router>
@@ -27,19 +27,19 @@ function App() {
             </React.Suspense>
           </div>
           <div className="side-content">
-            <div className="zero-diary">
+            <div className="side__column side__column-unit zero-diary">
               <a href="http://zfcj.blog98.fc2.com/" title="『零日記』岡山のゼロ戦クラブの日常をつづっているブログ" target="_blank">
                 <span>零日記</span>
               </a>
             </div>
-            <div className="zero-instructor">
+            <div className="side__column side__column-unit zero-instructor">
               <a href="/instructor/" title="インストラクターの紹介" target="_self">
                 <span>インストラクター紹介</span>
               </a>
             </div>
             <FbPage />
           </div>
-        </div>
+        </main>
       </div>
       <Footer />
     </Root>

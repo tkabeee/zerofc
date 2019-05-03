@@ -1947,5 +1947,31 @@ a:active {
     color: #fff;
     text-align: center; }
 
+.main__wrapper {
+  margin: 0 auto;
+  width: 960px; }
+
+.main__container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0; }
+
+.main-content {
+  flex: 1; }
+
+.side-content {
+  margin-left: 1rem;
+  width: 260px; }
+
+.side__column:nth-child(n+2) {
+  margin-top: 1rem; }
+
+.side__column-unit a {
+  display: block;
+  padding: 1rem 0;
+  background-color: #343a40;
+  color: #fff;
+  text-align: center; }
+
 .fas {
   margin-right: .2em; }

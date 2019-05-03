@@ -1,0 +1,35 @@
+.main__wrapper {
+  margin: 0 auto;
+  width: $desktop-client-width;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: row;
+  padding: $space-2 0;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.side-content {
+  margin-left: $space-2;
+  width: $desktop-client-secondary-column-width;
+}
+
+.side__column {
+  &:nth-child(n+2) {
+    margin-top: $space-2;
+  }
+}
+
+.side__column-unit {
+  a {
+    display: block;
+    padding: $space-2 0;
+    background-color: $dark;
+    color: $white;
+    text-align: center;
+  }
+}
