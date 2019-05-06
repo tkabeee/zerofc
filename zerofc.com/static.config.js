@@ -2,30 +2,62 @@ import path from 'path'
 import axios from 'axios'
 import React from 'react'
 
+const siteRoot = 'https://zerofc.web.fc2.com'
+
 export default {
-  siteRoot: 'https://zerofc.web.fc2.com/',
+  siteRoot: siteRoot,
   getSiteData: async ({ dev }) => ({
-    title: '岡山総合格闘技ジム ゼロ戦クラブ',
+    siteTitle: 'ゼロ戦クラブ',
+    siteSubTitle: '岡山総合格闘技ジム'
   }),
-  getRoutes: async () => {
-    const { data: posts } = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    )
+  getRoutes: async ({ dev }) => {
+    const { data: root }      = await axios.get(`${siteRoot}/contents/root/`)
+    const { data: admission } = await axios.get(`${siteRoot}/contents/admission/`)
+    const { data: guide }     = await axios.get(`${siteRoot}/contents/guide/`)
+    const { data: schedule }  = await axios.get(`${siteRoot}/contents/schedule/`)
+    const { data: kids }      = await axios.get(`${siteRoot}/contents/kids/`)
+    const { data: access }    = await axios.get(`${siteRoot}/contents/access/`)
+    const { data: link }      = await axios.get(`${siteRoot}/contents/link/`)
+    const { data: faq }       = await axios.get(`${siteRoot}/contents/faq/`)
+    const { data: sitemap }   = await axios.get(`${siteRoot}/contents/sitemap/`)
 
     return [
       {
-        path: '/blog',
-        getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          template: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
+        path: '/',
+        getData: () => ({ root })
       },
+      {
+        path: '/admission',
+        getData: () => ({ admission })
+      },
+      {
+        path: '/guide',
+        getData: () => ({ guide })
+      },
+      {
+        path: '/schedule',
+        getData: () => ({ schedule })
+      },
+      {
+        path: '/kids',
+        getData: () => ({ kids })
+      },
+      {
+        path: '/access',
+        getData: () => ({ access })
+      },
+      {
+        path: '/link',
+        getData: () => ({ link })
+      },
+      {
+        path: '/faq',
+        getData: () => ({ faq })
+      },
+      {
+        path: '/sitemap',
+        getData: () => ({ sitemap })
+      }
     ]
   },
   Document: ({

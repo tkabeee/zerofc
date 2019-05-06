@@ -1,7 +1,9 @@
 import React from 'react'
+import { useRouteData } from 'react-static'
 
-export default () => (
-  <div>
-    <h1>Link</h1>
-  </div>
-)
+export default () => {
+  const data = useRouteData()
+  return (
+    <div dangerouslySetInnerHTML={{__html: data.link}}></div>
+  )
+}
