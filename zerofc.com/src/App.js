@@ -18,8 +18,8 @@ function App() {
       <Header />
       <Navigation />
       <div className="main__wrapper">
-        <main class="main__container">
-          <div class="main-content">
+        <main className="main__container">
+          <div className="main-content">
             <React.Suspense fallback={<em>Loading...</em>}>
               <Router>
                 <Routes path="*" />

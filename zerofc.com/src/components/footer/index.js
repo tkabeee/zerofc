@@ -5,9 +5,9 @@ import './style.scss'
 
 export default () => (
   <footer className="global-footer">
-    <div class="footer__container">
+    <div className="footer__container">
       <div className="footer__menu">
-        <ul class="footer__menu-list">
+        <ul className="footer__menu-list">
           <li className="list-item"><Link to="/" title="TOP">TOP</Link></li>
           <li className="list-item">｜</li>
           <li className="list-item"><Link to="/admission/" title="入会案内">入会案内</Link></li>
@@ -26,7 +26,7 @@ export default () => (
           <li className="list-item">｜</li>
           <li className="list-item"><Link to="/link/" title="リンク">リンク</Link></li>
         </ul>
-        <ul class="footer__menu-list">
+        <ul className="footer__menu-list">
           <li className="list-item"><a href="mailto:&#122;&#102;&#99;&#100;&#111;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" title="お問い合わせ">お問い合わせ</a></li>
           <li className="list-item">｜</li>
           <li className="list-item"><Link to="/faq/" title="よくあるご質問">よくあるご質問</Link></li>
