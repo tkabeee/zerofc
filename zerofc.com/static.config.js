@@ -11,15 +11,16 @@ export default {
     siteSubTitle: '岡山総合格闘技ジム'
   }),
   getRoutes: async ({ dev }) => {
-    const { data: root }      = await axios.get(`${siteRoot}/contents/root/`)
-    const { data: admission } = await axios.get(`${siteRoot}/contents/admission/`)
-    const { data: guide }     = await axios.get(`${siteRoot}/contents/guide/`)
-    const { data: schedule }  = await axios.get(`${siteRoot}/contents/schedule/`)
-    const { data: kids }      = await axios.get(`${siteRoot}/contents/kids/`)
-    const { data: access }    = await axios.get(`${siteRoot}/contents/access/`)
-    const { data: link }      = await axios.get(`${siteRoot}/contents/link/`)
-    const { data: faq }       = await axios.get(`${siteRoot}/contents/faq/`)
-    const { data: sitemap }   = await axios.get(`${siteRoot}/contents/sitemap/`)
+    const { data: root }       = await axios.get(`${siteRoot}/contents/root/`)
+    const { data: admission }  = await axios.get(`${siteRoot}/contents/admission/`)
+    const { data: guide }      = await axios.get(`${siteRoot}/contents/guide/`)
+    const { data: schedule }   = await axios.get(`${siteRoot}/contents/schedule/`)
+    const { data: instructor } = await axios.get(`${siteRoot}/contents/instructor/`)
+    const { data: kids }       = await axios.get(`${siteRoot}/contents/kids/`)
+    const { data: access }     = await axios.get(`${siteRoot}/contents/access/`)
+    const { data: link }       = await axios.get(`${siteRoot}/contents/link/`)
+    const { data: faq }        = await axios.get(`${siteRoot}/contents/faq/`)
+    const { data: sitemap }    = await axios.get(`${siteRoot}/contents/sitemap/`)
 
     return [
       {
@@ -37,6 +38,10 @@ export default {
       {
         path: '/schedule',
         getData: () => ({ schedule })
+      },
+      {
+        path: '/instructor',
+        getData: () => ({ instructor })
       },
       {
         path: '/kids',
