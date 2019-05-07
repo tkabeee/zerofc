@@ -1,9 +1,6 @@
 import React from 'react'
-import { useRouteData } from 'react-static'
+import Faq from '../contents/faq'
 
-export default () => {
-  const data = useRouteData()
-  return (
-    <div className="dangerously" dangerouslySetInnerHTML={{__html: data.faq}}></div>
-  )
-}
+export default () => (
+  <Faq />
+)
