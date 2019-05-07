@@ -1,0 +1,45 @@
+.instructor-table {
+  width: 716px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.instructor-table td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.instructor-table .picture {
+  width: 184px;
+}
+
+.instructor-table .picture img {
+  padding: 1px;
+  border: 1px solid #989898;
+}
+
+.instructor-table p {
+  margin-bottom: 1em;
+}
+
+.instructor-table .infor {
+}
+
+.instructor-table .name {
+  font-size: 1.6em;
+}
+
+.instructor-table .name span {
+  padding-left: 1em;
+  color: #BBBBBB;
+  font-size: 0.8em;
+}
+
+.instructor-table .class {
+  padding-bottom: 3px;
+  border-bottom: 1px dotted #989898;
+}
+
+.instructor-table .introduction {
+}

@@ -1,9 +1,6 @@
 import React from 'react'
-import { useRouteData } from 'react-static'
+import Instructor from '../contents/instructor'
 
-export default () => {
-  const data = useRouteData()
-  return (
-    <div className="dangerously" dangerouslySetInnerHTML={{__html: data.instructor}}></div>
-  )
-}
+export default () => (
+  <Instructor />
+)
