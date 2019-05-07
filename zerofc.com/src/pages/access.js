@@ -1,9 +1,6 @@
 import React from 'react'
-import { useRouteData } from 'react-static'
+import Access from '../contents/access'
 
-export default () => {
-  const data = useRouteData()
-  return (
-    <div className="dangerously" dangerouslySetInnerHTML={{__html: data.access}}></div>
-  )
-}
+export default () => (
+  <Access />
+)
