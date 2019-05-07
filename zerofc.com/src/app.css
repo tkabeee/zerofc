@@ -1900,12 +1900,14 @@ a:active {
 .header__container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   margin: 0 auto;
+  padding: 1rem 0;
   width: 1024px; }
 
 .site-title {
-  font-size: 1.75rem; }
+  margin: 0;
+  font-size: 2.2rem; }
 
 .site-title__link {
   display: flex;
@@ -1940,6 +1942,7 @@ a:active {
   padding: 0;
   list-style: none;
   letter-spacing: -.40em;
+  margin-bottom: .6em;
   margin-left: auto; }
   .header__menu-list > *,
   .header__menu-list li, .header__menu-list dt, .header__menu-list dd {
