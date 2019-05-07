@@ -1,0 +1,29 @@
+.guide-table {
+  width: 716px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.guide-table td {
+  padding-right: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.guide-table td img {
+  box-shadow: 2px 2px 1px 1px #CCCCCC;
+  -webkit-box-shadow: 2px 2px 1px 1px #CCCCCC;
+  -moz-box-shadow: 2px 2px 1px 1px #CCCCCC;
+}
+
+.guide-table td p {
+  margin-bottom: 1em;
+  padding-left: 6px;
+  border-left: 4px #EE0000 solid;
+  text-align: left;
+}
+
+.guide-table td p span {
+  font-weight: bold;
+}
