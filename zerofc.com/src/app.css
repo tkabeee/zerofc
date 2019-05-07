@@ -2052,21 +2052,8 @@ a:active {
 .col-unit-instructor a {
   background-color: #c20404; }
 
-.admission-table {
-  margin-bottom: 1em;
-  border-collapse: separate;
-  border-spacing: 3px;
-  border: 1px #000000 solid; }
-  .admission-table td {
-    padding: 6px 10px;
-    border: 1px #000000 solid; }
-
-.admission-text {
-  margin-bottom: 1em; }
-
-.admission-text-heading {
-  font-size: 1.6em;
-  font-weight: bold; }
+.dangerously h3 {
+  font-size: 1.75rem; }
 
 .footer__container {
   margin: 0 auto;
