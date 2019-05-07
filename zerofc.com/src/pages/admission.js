@@ -4,6 +4,6 @@ import { useRouteData } from 'react-static'
 export default () => {
   const data = useRouteData()
   return (
-    <div dangerouslySetInnerHTML={{__html: data.admission}}></div>
+    <div className="dangerously" dangerouslySetInnerHTML={{__html: data.admission}}></div>
   )
 }
