@@ -1,9 +1,6 @@
 import React from 'react'
-import { useRouteData } from 'react-static'
+import Sitemap from '../contents/sitemap'
 
-export default () => {
-  const data = useRouteData()
-  return (
-    <div className="dangerously" dangerouslySetInnerHTML={{__html: data.sitemap}}></div>
-  )
-}
+export default () => (
+  <Sitemap />
+)
