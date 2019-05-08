@@ -1,1 +1,3 @@
 User-agent: *
+Disallow :
+Sitemap: https://zerofc.web.fc2.com/sitemap.xml
