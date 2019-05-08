@@ -107,6 +107,8 @@ export default {
         <Head>
           <meta charSet="UTF-8" />
           <title>{`${siteData.subTitle} ${siteData.title}（${siteData.tags.join('/')}）`}</title>
+          <meta name="description" content={siteData.description} />
+          <meta name="keywords" content={siteData.keywords.join(',')} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="google-site-verification" content="VY6apQgrtzLTC_yR2i9QmKyTyc4xV9Injys1efZocMU" />
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossOrigin="anonymous" />
