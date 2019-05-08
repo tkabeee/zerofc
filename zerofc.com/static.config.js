@@ -10,10 +10,7 @@ export default {
   siteRoot: SITE_ROOT,
   getSiteData: async ({ dev }) => ({
     title: SITE_TITLE,
-    subTitle: SITE_SUB_TITLE,
-    tags: ['修斗','ブラジリアン柔術','グラップリング','レスリング','キックボクシング','グローブ空手'],
-    description: '打撃・グラップリング・柔術・レスリング・キックボクシングなど各自の希望に合わせた練習を行っています。初心者や未経験の方でも楽しく練習ができる格闘技ジムです。修斗協会公認チームとして岡山・倉敷・水島・総社で活動中。岡山在住のプロ総合格闘家が教えます！',
-    keywords: ['岡山','倉敷','水島','格闘技','総合格闘技','柔術','レスリング','修斗','キック','ボクシング','空手']
+    subTitle: SITE_SUB_TITLE
   }),
   getRoutes: async ({ dev }) => {
     const { data: root }       = await axios.get(`${SITE_ROOT}/contents/root/`)
@@ -30,7 +27,14 @@ export default {
     return [
       {
         path: '/',
-        getData: () => ({ root })
+        getData: () => ({
+          root,
+          meta: {
+            pageTitle: `${SITE_SUB_TITLE} ${SITE_TITLE}（修斗/ブラジリアン柔術/グラップリング/レスリング/キックボクシング/グローブ空手）【岡山/倉敷/水島/総社】`,
+            pageDescription: '打撃・グラップリング・柔術・レスリング・キックボクシングなど各自の希望に合わせた練習を行っています。初心者や未経験の方でも楽しく練習ができる格闘技ジムです。修斗協会公認チームとして岡山・倉敷・水島・総社で活動中。岡山在住のプロ総合格闘家が教えます！',
+            pageKeywords: ['岡山','倉敷','水島','格闘技','総合格闘技','柔術','レスリング','修斗','キック','ボクシング','空手']
+          }
+        })
       },
       {
         path: '/admission',
@@ -144,9 +148,6 @@ export default {
       <Html lang="ja">
         <Head>
           <meta charSet="UTF-8" />
-          <title>{`${siteData.subTitle} ${siteData.title}（${siteData.tags.join('/')}）`}</title>
-          <meta name="description" content={siteData.description} />
-          <meta name="keywords" content={siteData.keywords.join(',')} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="google-site-verification" content="VY6apQgrtzLTC_yR2i9QmKyTyc4xV9Injys1efZocMU" />
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css" integrity="sha384-QokYePQSOwpBDuhlHOsX0ymF6R/vLk/UQVz3WHa6wygxI5oGTmDTv8wahFOSspdm" crossOrigin="anonymous" />
