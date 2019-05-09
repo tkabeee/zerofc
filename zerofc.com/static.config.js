@@ -1,8 +1,6 @@
 import path from 'path'
 import axios from 'axios'
-import React from 'react'
-
-import Document from './src/document'
+import Document from './src/Document'
 
 const SITE_ROOT = 'https://zerofc.web.fc2.com'
 const SITE_TITLE = 'ゼロ戦クラブ'
