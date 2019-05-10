@@ -1,0 +1,15 @@
+@mixin reset-space {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  @include reset-space;
+  list-style: none;
+  letter-spacing: -.40em;
+
+  > *,
+  li, dt, dd {
+    letter-spacing: normal;
+  }
+}

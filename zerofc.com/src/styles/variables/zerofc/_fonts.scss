@@ -1,0 +1,15 @@
+// Typography
+
+$font-family-sans-serif:      Roboto, "Helvetica Neue", Helvetica, Arial, 'Hiragino Sans', "ヒラギノ角ゴシック", 'Hiragino Kaku Gothic ProN', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !default;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xlg:               ($font-size-base * 1.75) !default;
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+$font-size-xsm:               ($font-size-base * .75) !default;
+
+$font-weight-light:           200 !default;
+$font-weight-normal:          300 !default;
+$font-weight-bold:            600 !default;
+
+$line-height-base: 1.4 !default;

@@ -1,0 +1,28 @@
+// Viewport additional helpers
+
+// vw-10..vw-90, vh-10..vh-90
+// vw-100 and vh-100 already exists in bootstrap
+
+@each $prop, $abbrev in (width: w, height: h) {
+  @each $size, $length in $ranges {
+    @if $size < 100 {
+      .v#{$abbrev}-#{$size} { #{$prop}: #{$length}v#{$abbrev} !important; }
+    }
+  }
+}
+
+// w-1-rem..w-100-rem, h-1-rem..h-100-rem
+@each $prop, $abbrev in (width: w, height: h) {
+  @for $i from 1 through 10 {
+    .#{$abbrev}-#{$i}-rem { #{$prop}: #{$i}rem !important; }
+    .min-#{$abbrev}-#{$i}-rem { min-#{$prop}: #{$i}rem !important; }
+    .max-#{$abbrev}-#{$i}-rem { max-#{$prop}: #{$i}rem !important; }
+    @each $size, $length in $ranges {
+      @if $size < 100 {
+        .#{$abbrev}-#{$size + $i}-rem { #{$prop}: #{$length + $i}rem !important; }
+        .min-#{$abbrev}-#{$size + $i}-rem { min-#{$prop}: #{$length + $i}rem !important; }
+        .max-#{$abbrev}-#{$size + $i}-rem { max-#{$prop}: #{$length + $i}rem !important; }
+      }
+    }
+  }
+}
