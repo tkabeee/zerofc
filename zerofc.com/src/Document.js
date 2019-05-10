@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 
-// https://github.com/nathanpower/wordflow-site/blob/0b50ae11b8e737e6cf8d00ed7a4d2ce1561632ae/src/Document.jsx#L17
-
 export default class CustomHtml extends Component {
   render () {
-    const { Html, Head, Body, children } = this.props;
+    const { Html, Head, Body, children } = this.props
 
     return (
       <Html lang="ja">
