@@ -1,0 +1,28 @@
+dl {
+  display: block;
+  margin-bottom: 1em;
+}
+
+dl dt {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+dl dd {
+  margin-left: 0;
+}
+
+dl dd table {
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+dl dd table th,
+dl dd table td {
+  vertical-align: top;
+  text-align: left;
+}
+
+dl dd table td {
+  padding-top: 3px;
+}

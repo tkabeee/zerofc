@@ -1,0 +1,45 @@
+.global-footer {
+}
+
+.footer__container {
+  margin: 0 auto;
+  padding: $space-3 0;
+  width: $desktop-client-width;
+  color: $white;
+  font-size: $font-size-sm;
+}
+
+.footer__menu {
+  margin-bottom: $space-3;
+}
+
+.footer__menu-list {
+  @include reset-list;
+
+  &:nth-child(n+2) {
+    margin-top: $space-1;
+  }
+
+  .list-item {
+    display: inline-block;
+    font-size: $font-size-sm;
+
+    &:nth-child(n+2) {
+      margin-left: 1em;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.description {
+  margin-bottom: $space-3;
+  font-size: $font-size-sm;
+}
+
+.copyright {
+  font-size: $font-size-xsm;
+  text-align: left;
+}

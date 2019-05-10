@@ -1,0 +1,21 @@
+body {
+  background-color: $black;
+  color: #333333;
+  line-height: 1.4;
+}
+
+a:link {
+  color: $anchor-link-color;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $anchor-visited-color;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: $anchor-hover-color;
+  text-decoration: underline;
+}
