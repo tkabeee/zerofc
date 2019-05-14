@@ -2,7 +2,7 @@ import path from 'path'
 import axios from 'axios'
 import Document from './src/Document'
 
-const SITE_ROOT = 'https://zerofc.web.fc2.com'
+const SITE_ROOT = 'https://zerofc.netlify.com'
 const SITE_TITLE = 'ゼロ戦クラブ'
 const SITE_SUB_TITLE = '岡山総合格闘技ジム'
 
