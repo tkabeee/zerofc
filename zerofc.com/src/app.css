@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .fs-xsm {
   font-size: 0.75rem; }
 
@@ -1872,9 +1873,13 @@
 *::after {
   box-sizing: border-box; }
 
+html {
+  font-family: sans-serif; }
+
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", "ヒラギノ角ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem;
@@ -1911,7 +1916,8 @@ a:active {
   align-items: flex-end;
   margin: 0 auto;
   padding: 1rem 0;
-  width: 1024px; }
+  width: 1024px;
+  background-color: #fff; }
 
 .site-title {
   margin: 0;
@@ -1976,7 +1982,8 @@ a:active {
 
 .nav__container {
   margin: 0 auto;
-  width: 1024px; }
+  width: 1024px;
+  background-color: #000; }
 
 .nav__menu-list {
   margin: 0;
@@ -2015,7 +2022,8 @@ a:active {
   flex-direction: row;
   margin: 0 auto;
   padding: 1rem 0;
-  width: 1024px; }
+  width: 1024px;
+  background-color: #fff; }
 
 .main-content {
   width: 724px; }
@@ -2063,12 +2071,16 @@ a:active {
 .dangerously h3 {
   font-size: 1.75rem; }
 
+.global-footer {
+  background-color: #000; }
+
 .footer__container {
   margin: 0 auto;
   padding: 1.5rem 0;
   width: 1024px;
   color: #fff;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  background-color: #000; }
 
 .footer__menu {
   margin-bottom: 1.5rem; }

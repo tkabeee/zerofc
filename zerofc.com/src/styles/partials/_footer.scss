@@ -1,4 +1,5 @@
 .global-footer {
+  background-color: $black;
 }
 
 .footer__container {
@@ -7,6 +8,7 @@
   width: $desktop-client-width;
   color: $white;
   font-size: $font-size-sm;
+  background-color: $black;
 }
 
 .footer__menu {
